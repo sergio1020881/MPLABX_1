@@ -1,234 +1,234 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
-                              build/default/production/librarias/Atmega128API.o (__divmodhi4)
+                              build/default/debug/librarias/Atmega128API.o (__divmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
-                              build/default/production/librarias/Atmega128API.o (__udivmodsi4)
+                              build/default/debug/librarias/Atmega128API.o (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_tablejump2.o)
-                              build/default/production/librarias/Atmega128API.o (__tablejump2__)
+                              build/default/debug/librarias/Atmega128API.o (__tablejump2__)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
-                              build/default/production/main.o (__do_copy_data)
+                              build/default/debug/main.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
-                              build/default/production/main.o (__do_clear_bss)
+                              build/default/debug/main.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 
 Allocating common symbols
 Common symbol       size              file
 
-lcd0_PIN            0x2               build/default/production/librarias/lcd.o
-uart_msg            0x20              build/default/production/librarias/Atmega128API.o
-timer1_state        0x1               build/default/production/librarias/Atmega128API.o
-lcd1_DDR            0x2               build/default/production/librarias/lcd.o
-lcd1_detect         0x1               build/default/production/librarias/lcd.o
-lcd1_PIN            0x2               build/default/production/librarias/lcd.o
-lcd0_DDR            0x2               build/default/production/librarias/lcd.o
-lcd0_detect         0x1               build/default/production/librarias/lcd.o
-uart1_index         0x2               build/default/production/librarias/Atmega128API.o
-timer3_state        0x1               build/default/production/librarias/Atmega128API.o
-uart1_msg           0x20              build/default/production/librarias/Atmega128API.o
-timer2_state        0x1               build/default/production/librarias/Atmega128API.o
-uart_index          0x2               build/default/production/librarias/Atmega128API.o
-lcd0_PORT           0x2               build/default/production/librarias/lcd.o
-twi_chip_id         0x1               build/default/production/librarias/Atmega128API.o
-lcd1_PORT           0x2               build/default/production/librarias/lcd.o
-i2c_output          0x1               build/default/production/main.o
-timer0_state        0x1               build/default/production/librarias/Atmega128API.o
+lcd0_PIN            0x2               build/default/debug/librarias/lcd.o
+uart_msg            0x20              build/default/debug/librarias/Atmega128API.o
+timer1_state        0x1               build/default/debug/librarias/Atmega128API.o
+lcd1_DDR            0x2               build/default/debug/librarias/lcd.o
+lcd1_detect         0x1               build/default/debug/librarias/lcd.o
+lcd1_PIN            0x2               build/default/debug/librarias/lcd.o
+lcd0_DDR            0x2               build/default/debug/librarias/lcd.o
+lcd0_detect         0x1               build/default/debug/librarias/lcd.o
+uart1_index         0x2               build/default/debug/librarias/Atmega128API.o
+timer3_state        0x1               build/default/debug/librarias/Atmega128API.o
+uart1_msg           0x20              build/default/debug/librarias/Atmega128API.o
+timer2_state        0x1               build/default/debug/librarias/Atmega128API.o
+uart_index          0x2               build/default/debug/librarias/Atmega128API.o
+lcd0_PORT           0x2               build/default/debug/librarias/lcd.o
+twi_chip_id         0x1               build/default/debug/librarias/Atmega128API.o
+lcd1_PORT           0x2               build/default/debug/librarias/lcd.o
+i2c_output          0x1               build/default/debug/main.o
+timer0_state        0x1               build/default/debug/librarias/Atmega128API.o
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
- .text          0x00000000        0x0 build/default/production/main.o
- .data          0x00000000        0x0 build/default/production/main.o
- .bss           0x00000000        0x0 build/default/production/main.o
- COMMON         0x00000000        0x1 build/default/production/main.o
- .text          0x00000000        0x0 build/default/production/librarias/Atmega128API.o
- .data          0x00000000        0x0 build/default/production/librarias/Atmega128API.o
- .bss           0x00000000        0x0 build/default/production/librarias/Atmega128API.o
+ .text          0x00000000        0x0 build/default/debug/main.o
+ .data          0x00000000        0x0 build/default/debug/main.o
+ .bss           0x00000000        0x0 build/default/debug/main.o
+ COMMON         0x00000000        0x1 build/default/debug/main.o
+ .text          0x00000000        0x0 build/default/debug/librarias/Atmega128API.o
+ .data          0x00000000        0x0 build/default/debug/librarias/Atmega128API.o
+ .bss           0x00000000        0x0 build/default/debug/librarias/Atmega128API.o
  .text.ANALOG_read
-                0x00000000       0x14 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x14 build/default/debug/librarias/Atmega128API.o
  .text.INTERRUPT_reset_status
-                0x00000000       0x5a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x5a build/default/debug/librarias/Atmega128API.o
  .text.INTERRUPT_set
-                0x00000000      0x1d0 build/default/production/librarias/Atmega128API.o
+                0x00000000      0x1d0 build/default/debug/librarias/Atmega128API.o
  .progmem.gcc_sw_table.INTERRUPT_set
-                0x00000000       0x10 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x10 build/default/debug/librarias/Atmega128API.o
  .text.INTERRUPT_off
-                0x00000000       0x56 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x56 build/default/debug/librarias/Atmega128API.o
  .progmem.gcc_sw_table.INTERRUPT_off
-                0x00000000       0x10 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x10 build/default/debug/librarias/Atmega128API.o
  .text.spi_transfer_sync
-                0x00000000       0x2c build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2c build/default/debug/librarias/Atmega128API.o
  .text.spi_transmit_sync
-                0x00000000       0x24 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x24 build/default/debug/librarias/Atmega128API.o
  .text.spi_fast_shift
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER0_start
-                0x00000000       0x8a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x8a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER0_compoutmode
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER0_compare
-                0x00000000        0x4 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x4 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER0_stop
-                0x00000000        0xe build/default/production/librarias/Atmega128API.o
+                0x00000000        0xe build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_start
-                0x00000000       0x8e build/default/production/librarias/Atmega128API.o
+                0x00000000       0x8e build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compoutmodeA
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compoutmodeB
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compoutmodeC
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compareA
-                0x00000000        0x6 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x6 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compareB
-                0x00000000        0x6 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x6 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_compareC
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1_stop
-                0x00000000       0x10 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x10 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER2_start
-                0x00000000       0x8a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x8a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER2_compoutmode
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER2_compare
-                0x00000000        0x4 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x4 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER2_stop
-                0x00000000        0xe build/default/production/librarias/Atmega128API.o
+                0x00000000        0xe build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_start
-                0x00000000       0xb6 build/default/production/librarias/Atmega128API.o
+                0x00000000       0xb6 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compoutmodeA
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compoutmodeB
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compoutmodeC
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compareA
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compareB
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_compareC
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3_stop
-                0x00000000       0x18 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x18 build/default/debug/librarias/Atmega128API.o
  .text.uart_getc
-                0x00000000       0x3a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x3a build/default/debug/librarias/Atmega128API.o
  .text.uart_available
-                0x00000000       0x1a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x1a build/default/debug/librarias/Atmega128API.o
  .text.uart_flush
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.uart1_getc
-                0x00000000       0x3a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x3a build/default/debug/librarias/Atmega128API.o
  .text.uart1_available
-                0x00000000       0x1a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x1a build/default/debug/librarias/Atmega128API.o
  .text.uart1_flush
-                0x00000000        0xa build/default/production/librarias/Atmega128API.o
+                0x00000000        0xa build/default/debug/librarias/Atmega128API.o
  .text.ANALOGenable
-                0x00000000      0x12c build/default/production/librarias/Atmega128API.o
+                0x00000000      0x12c build/default/debug/librarias/Atmega128API.o
  .text.INTERRUPTenable
-                0x00000000       0x44 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x44 build/default/debug/librarias/Atmega128API.o
  .text.SPIenable
-                0x00000000      0x10c build/default/production/librarias/Atmega128API.o
+                0x00000000      0x10c build/default/debug/librarias/Atmega128API.o
  .text.spi_default
-                0x00000000       0x16 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x16 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER0enable
-                0x00000000       0x84 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x84 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER1enable
-                0x00000000      0x1ec build/default/production/librarias/Atmega128API.o
+                0x00000000      0x1ec build/default/debug/librarias/Atmega128API.o
  .progmem.gcc_sw_table.TIMER_COUNTER1enable
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER2enable
-                0x00000000       0x7e build/default/production/librarias/Atmega128API.o
+                0x00000000       0x7e build/default/debug/librarias/Atmega128API.o
  .text.TIMER_COUNTER3enable
-                0x00000000      0x264 build/default/production/librarias/Atmega128API.o
+                0x00000000      0x264 build/default/debug/librarias/Atmega128API.o
  .progmem.gcc_sw_table.TIMER_COUNTER3enable
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.I2Cenable
-                0x00000000       0xe0 build/default/production/librarias/Atmega128API.o
+                0x00000000       0xe0 build/default/debug/librarias/Atmega128API.o
  .text.twi_transmit
-                0x00000000       0x48 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x48 build/default/debug/librarias/Atmega128API.o
  .text.twi_stop
-                0x00000000       0x2c build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2c build/default/debug/librarias/Atmega128API.o
  .text.twi_status
-                0x00000000        0x8 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x8 build/default/debug/librarias/Atmega128API.o
  .text.twi_poll
-                0x00000000       0x28 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x28 build/default/debug/librarias/Atmega128API.o
  .text.twi_start
-                0x00000000       0x24 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x24 build/default/debug/librarias/Atmega128API.o
  .text.twi_master_connect
-                0x00000000       0x36 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x36 build/default/debug/librarias/Atmega128API.o
  .text.twi_master_write
-                0x00000000       0x38 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x38 build/default/debug/librarias/Atmega128API.o
  .text.twi_master_read
-                0x00000000       0xa0 build/default/production/librarias/Atmega128API.o
+                0x00000000       0xa0 build/default/debug/librarias/Atmega128API.o
  .text.UARTenable
-                0x00000000      0x1d6 build/default/production/librarias/Atmega128API.o
+                0x00000000      0x1d6 build/default/debug/librarias/Atmega128API.o
  .text.UART_Rx_pop
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .rodata.str1.1
-                0x00000000        0x6 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x6 build/default/debug/librarias/Atmega128API.o
  .text.uart_read
-                0x00000000       0x5a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x5a build/default/debug/librarias/Atmega128API.o
  .text.UART_Tx_push
-                0x00000000       0x26 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x26 build/default/debug/librarias/Atmega128API.o
  .text.uart_putc
-                0x00000000        0x8 build/default/production/librarias/Atmega128API.o
+                0x00000000        0x8 build/default/debug/librarias/Atmega128API.o
  .text.uart_puts
-                0x00000000       0x1e build/default/production/librarias/Atmega128API.o
+                0x00000000       0x1e build/default/debug/librarias/Atmega128API.o
  .text.uart_puts_p
-                0x00000000       0x24 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x24 build/default/debug/librarias/Atmega128API.o
  .text.UART1enable
-                0x00000000      0x210 build/default/production/librarias/Atmega128API.o
+                0x00000000      0x210 build/default/debug/librarias/Atmega128API.o
  .text.UART1_Rx_pop
-                0x00000000       0x2a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x2a build/default/debug/librarias/Atmega128API.o
  .text.uart1_read
-                0x00000000       0x5a build/default/production/librarias/Atmega128API.o
+                0x00000000       0x5a build/default/debug/librarias/Atmega128API.o
  .text.UART1_Tx_push
-                0x00000000       0x26 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x26 build/default/debug/librarias/Atmega128API.o
  .text.uart1_putc
-                0x00000000       0x10 build/default/production/librarias/Atmega128API.o
+                0x00000000       0x10 build/default/debug/librarias/Atmega128API.o
  .text.uart1_puts
-                0x00000000       0x1e build/default/production/librarias/Atmega128API.o
+                0x00000000       0x1e build/default/debug/librarias/Atmega128API.o
  .text.uart1_puts_p
-                0x00000000       0x24 build/default/production/librarias/Atmega128API.o
- COMMON         0x00000000       0x49 build/default/production/librarias/Atmega128API.o
- .text          0x00000000        0x0 build/default/production/librarias/lcd.o
- .data          0x00000000        0x0 build/default/production/librarias/lcd.o
- .bss           0x00000000        0x0 build/default/production/librarias/lcd.o
+                0x00000000       0x24 build/default/debug/librarias/Atmega128API.o
+ COMMON         0x00000000       0x49 build/default/debug/librarias/Atmega128API.o
+ .text          0x00000000        0x0 build/default/debug/librarias/lcd.o
+ .data          0x00000000        0x0 build/default/debug/librarias/lcd.o
+ .bss           0x00000000        0x0 build/default/debug/librarias/lcd.o
  .text.LCD1_write
-                0x00000000      0x188 build/default/production/librarias/lcd.o
+                0x00000000      0x188 build/default/debug/librarias/lcd.o
  .text.LCD1_read
-                0x00000000       0xf6 build/default/production/librarias/lcd.o
- .text.LCD1_BF  0x00000000       0x28 build/default/production/librarias/lcd.o
+                0x00000000       0xf6 build/default/debug/librarias/lcd.o
+ .text.LCD1_BF  0x00000000       0x28 build/default/debug/librarias/lcd.o
  .text.LCD1_putch
-                0x00000000        0xe build/default/production/librarias/lcd.o
+                0x00000000        0xe build/default/debug/librarias/lcd.o
  .text.LCD1_getch
-                0x00000000       0x16 build/default/production/librarias/lcd.o
+                0x00000000       0x16 build/default/debug/librarias/lcd.o
  .text.LCD1_string
-                0x00000000       0x26 build/default/production/librarias/lcd.o
+                0x00000000       0x26 build/default/debug/librarias/lcd.o
  .text.LCD1_string_size
-                0x00000000       0x66 build/default/production/librarias/lcd.o
+                0x00000000       0x66 build/default/debug/librarias/lcd.o
  .text.LCD1_hspace
-                0x00000000       0x1e build/default/production/librarias/lcd.o
+                0x00000000       0x1e build/default/debug/librarias/lcd.o
  .text.LCD1_clear
-                0x00000000       0x10 build/default/production/librarias/lcd.o
+                0x00000000       0x10 build/default/debug/librarias/lcd.o
  .text.LCD1_gotoxy
-                0x00000000       0x5e build/default/production/librarias/lcd.o
+                0x00000000       0x5e build/default/debug/librarias/lcd.o
  .text.LCD0_strobe
-                0x00000000       0x1e build/default/production/librarias/lcd.o
+                0x00000000       0x1e build/default/debug/librarias/lcd.o
  .text.LCD1_inic
-                0x00000000       0xb4 build/default/production/librarias/lcd.o
+                0x00000000       0xb4 build/default/debug/librarias/lcd.o
  .text.LCD1enable
-                0x00000000       0xb0 build/default/production/librarias/lcd.o
+                0x00000000       0xb0 build/default/debug/librarias/lcd.o
  .text.LCD1_reboot
-                0x00000000       0x24 build/default/production/librarias/lcd.o
+                0x00000000       0x24 build/default/debug/librarias/lcd.o
  .text.LCD1_strobe
-                0x00000000       0x1e build/default/production/librarias/lcd.o
+                0x00000000       0x1e build/default/debug/librarias/lcd.o
  .text.LCD_ticks
-                0x00000000       0x14 build/default/production/librarias/lcd.o
+                0x00000000       0x14 build/default/debug/librarias/lcd.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
@@ -358,10 +358,13 @@ Linker script and memory map
 
 Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
-LOAD build/default/production/main.o
-LOAD build/default/production/librarias/Atmega128API.o
-LOAD build/default/production/librarias/lcd.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/librarias/Atmega128API.o
+LOAD build/default/debug/librarias/lcd.o
                 0x00000001                __MPLAB_BUILD = 0x1
+                0x00000001                __MPLAB_DEBUG = 0x1
+                0x00000001                __DEBUG = 0x1
+                0x00000001                __MPLAB_DEBUGGER_SIMULATOR = 0x1
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
 END GROUP
@@ -563,62 +566,62 @@ END GROUP
                 0x000000ce                . = ALIGN (0x2)
  *(.text.*)
  .text.PORTINIT
-                0x000000ce       0x1c build/default/production/main.o
+                0x000000ce       0x1c build/default/debug/main.o
                 0x000000ce                PORTINIT
- .text.main     0x000000ea       0x68 build/default/production/main.o
+ .text.main     0x000000ea       0x68 build/default/debug/main.o
                 0x000000ea                main
  .text.__vector_21
-                0x00000152      0x10a build/default/production/librarias/Atmega128API.o
+                0x00000152      0x10a build/default/debug/librarias/Atmega128API.o
                 0x00000152                __vector_21
  .text.__vector_18
-                0x0000025c       0x70 build/default/production/librarias/Atmega128API.o
+                0x0000025c       0x70 build/default/debug/librarias/Atmega128API.o
                 0x0000025c                __vector_18
  .text.__vector_19
-                0x000002cc       0x52 build/default/production/librarias/Atmega128API.o
+                0x000002cc       0x52 build/default/debug/librarias/Atmega128API.o
                 0x000002cc                __vector_19
  .text.__vector_30
-                0x0000031e       0x76 build/default/production/librarias/Atmega128API.o
+                0x0000031e       0x76 build/default/debug/librarias/Atmega128API.o
                 0x0000031e                __vector_30
  .text.__vector_31
-                0x00000394       0x60 build/default/production/librarias/Atmega128API.o
+                0x00000394       0x60 build/default/debug/librarias/Atmega128API.o
                 0x00000394                __vector_31
  .text.LCD0_write
-                0x000003f4      0x188 build/default/production/librarias/lcd.o
+                0x000003f4      0x188 build/default/debug/librarias/lcd.o
                 0x000003f4                LCD0_write
  .text.LCD0_read
-                0x0000057c       0xf6 build/default/production/librarias/lcd.o
+                0x0000057c       0xf6 build/default/debug/librarias/lcd.o
                 0x0000057c                LCD0_read
- .text.LCD0_BF  0x00000672       0x28 build/default/production/librarias/lcd.o
+ .text.LCD0_BF  0x00000672       0x28 build/default/debug/librarias/lcd.o
                 0x00000672                LCD0_BF
  .text.LCD0_putch
-                0x0000069a        0xe build/default/production/librarias/lcd.o
+                0x0000069a        0xe build/default/debug/librarias/lcd.o
                 0x0000069a                LCD0_putch
  .text.LCD0_getch
-                0x000006a8       0x16 build/default/production/librarias/lcd.o
+                0x000006a8       0x16 build/default/debug/librarias/lcd.o
                 0x000006a8                LCD0_getch
  .text.LCD0_string
-                0x000006be       0x26 build/default/production/librarias/lcd.o
+                0x000006be       0x26 build/default/debug/librarias/lcd.o
                 0x000006be                LCD0_string
  .text.LCD0_string_size
-                0x000006e4       0x66 build/default/production/librarias/lcd.o
+                0x000006e4       0x66 build/default/debug/librarias/lcd.o
                 0x000006e4                LCD0_string_size
  .text.LCD0_hspace
-                0x0000074a       0x1e build/default/production/librarias/lcd.o
+                0x0000074a       0x1e build/default/debug/librarias/lcd.o
                 0x0000074a                LCD0_hspace
  .text.LCD0_clear
-                0x00000768       0x10 build/default/production/librarias/lcd.o
+                0x00000768       0x10 build/default/debug/librarias/lcd.o
                 0x00000768                LCD0_clear
  .text.LCD0_gotoxy
-                0x00000778       0x5e build/default/production/librarias/lcd.o
+                0x00000778       0x5e build/default/debug/librarias/lcd.o
                 0x00000778                LCD0_gotoxy
  .text.LCD0_inic
-                0x000007d6       0xb4 build/default/production/librarias/lcd.o
+                0x000007d6       0xb4 build/default/debug/librarias/lcd.o
                 0x000007d6                LCD0_inic
  .text.LCD0enable
-                0x0000088a       0xb0 build/default/production/librarias/lcd.o
+                0x0000088a       0xb0 build/default/debug/librarias/lcd.o
                 0x0000088a                LCD0enable
  .text.LCD0_reboot
-                0x0000093a       0x24 build/default/production/librarias/lcd.o
+                0x0000093a       0x24 build/default/debug/librarias/lcd.o
                 0x0000093a                LCD0_reboot
                 0x0000095e                . = ALIGN (0x2)
  *(.fini9)
@@ -655,7 +658,7 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800100       0x18 build/default/production/main.o
+                0x00800100       0x18 build/default/debug/main.o
  *(.gnu.linkonce.r*)
                 0x00800118                . = ALIGN (0x2)
                 0x00800118                _edata = .
@@ -666,48 +669,48 @@ END GROUP
  *(.bss)
  *(.bss*)
  .bss.UART1_LastRxError
-                0x00800118        0x1 build/default/production/librarias/Atmega128API.o
+                0x00800118        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_RxTail
-                0x00800119        0x1 build/default/production/librarias/Atmega128API.o
+                0x00800119        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_RxHead
-                0x0080011a        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080011a        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_TxTail
-                0x0080011b        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080011b        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_TxHead
-                0x0080011c        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080011c        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_RxBuf
-                0x0080011d       0x20 build/default/production/librarias/Atmega128API.o
+                0x0080011d       0x20 build/default/debug/librarias/Atmega128API.o
  .bss.UART1_TxBuf
-                0x0080013d       0x20 build/default/production/librarias/Atmega128API.o
+                0x0080013d       0x20 build/default/debug/librarias/Atmega128API.o
  .bss.UART_LastRxError
-                0x0080015d        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080015d        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART_RxTail
-                0x0080015e        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080015e        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART_RxHead
-                0x0080015f        0x1 build/default/production/librarias/Atmega128API.o
+                0x0080015f        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART_TxTail
-                0x00800160        0x1 build/default/production/librarias/Atmega128API.o
+                0x00800160        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART_TxHead
-                0x00800161        0x1 build/default/production/librarias/Atmega128API.o
+                0x00800161        0x1 build/default/debug/librarias/Atmega128API.o
  .bss.UART_RxBuf
-                0x00800162       0x20 build/default/production/librarias/Atmega128API.o
+                0x00800162       0x20 build/default/debug/librarias/Atmega128API.o
  .bss.UART_TxBuf
-                0x00800182       0x20 build/default/production/librarias/Atmega128API.o
+                0x00800182       0x20 build/default/debug/librarias/Atmega128API.o
  .bss.adc_n_sample
-                0x008001a2        0x1 build/default/production/librarias/Atmega128API.o
- .bss.adc_tmp   0x008001a3        0x2 build/default/production/librarias/Atmega128API.o
+                0x008001a2        0x1 build/default/debug/librarias/Atmega128API.o
+ .bss.adc_tmp   0x008001a3        0x2 build/default/debug/librarias/Atmega128API.o
  .bss.adc_sample
-                0x008001a5        0x2 build/default/production/librarias/Atmega128API.o
+                0x008001a5        0x2 build/default/debug/librarias/Atmega128API.o
  .bss.ADC_SELECTOR
-                0x008001a7        0x2 build/default/production/librarias/Atmega128API.o
+                0x008001a7        0x2 build/default/debug/librarias/Atmega128API.o
  .bss.ADC_N_CHANNEL
-                0x008001a9        0x2 build/default/production/librarias/Atmega128API.o
+                0x008001a9        0x2 build/default/debug/librarias/Atmega128API.o
  .bss.ADC_CHANNEL_GAIN
-                0x008001ab       0x10 build/default/production/librarias/Atmega128API.o
+                0x008001ab       0x10 build/default/debug/librarias/Atmega128API.o
  .bss.ADC_VALUE
-                0x008001bb       0x10 build/default/production/librarias/Atmega128API.o
+                0x008001bb       0x10 build/default/debug/librarias/Atmega128API.o
  *(COMMON)
- COMMON         0x008001cb        0xe build/default/production/librarias/lcd.o
+ COMMON         0x008001cb        0xe build/default/debug/librarias/lcd.o
                 0x008001cb                lcd0_PIN
                 0x008001cd                lcd1_DDR
                 0x008001cf                lcd1_detect
@@ -766,10 +769,10 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 build/default/production/main.o
+ .comment       0x00000000       0x30 build/default/debug/main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 build/default/production/librarias/Atmega128API.o
- .comment       0x00000030       0x31 build/default/production/librarias/lcd.o
+ .comment       0x00000030       0x31 build/default/debug/librarias/Atmega128API.o
+ .comment       0x00000030       0x31 build/default/debug/librarias/lcd.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c
@@ -791,33 +794,60 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges
+.debug_aranges  0x00000000      0x388
  *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 build/default/debug/main.o
+ .debug_aranges
+                0x00000028      0x260 build/default/debug/librarias/Atmega128API.o
+ .debug_aranges
+                0x00000288      0x100 build/default/debug/librarias/lcd.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x780
+.debug_info     0x00000000     0x376e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
+ .debug_info    0x00000780      0x334 build/default/debug/main.o
+ .debug_info    0x00000ab4     0x1ad5 build/default/debug/librarias/Atmega128API.o
+ .debug_info    0x00002589     0x11e5 build/default/debug/librarias/lcd.o
 
-.debug_abbrev   0x00000000      0x718
+.debug_abbrev   0x00000000      0xef2
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x718 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
+ .debug_abbrev  0x00000718      0x161 build/default/debug/main.o
+ .debug_abbrev  0x00000879      0x38c build/default/debug/librarias/Atmega128API.o
+ .debug_abbrev  0x00000c05      0x2ed build/default/debug/librarias/lcd.o
 
-.debug_line     0x00000000      0x16a
+.debug_line     0x00000000     0x2a65
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x16a C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
+ .debug_line    0x0000016a      0x11b build/default/debug/main.o
+ .debug_line    0x00000285     0x1be8 build/default/debug/librarias/Atmega128API.o
+ .debug_line    0x00001e6d      0xbf8 build/default/debug/librarias/lcd.o
 
-.debug_frame
+.debug_frame    0x00000000      0x90c
  *(.debug_frame)
+ .debug_frame   0x00000000       0x44 build/default/debug/main.o
+ .debug_frame   0x00000044      0x63c build/default/debug/librarias/Atmega128API.o
+ .debug_frame   0x00000680      0x28c build/default/debug/librarias/lcd.o
 
-.debug_str      0x00000000      0x27d
+.debug_str      0x00000000      0xe42
  *(.debug_str)
  .debug_str     0x00000000      0x27d C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
+ .debug_str     0x0000027d      0x17b build/default/debug/main.o
+                                0x1f9 (size before relaxing)
+ .debug_str     0x000003f8      0x837 build/default/debug/librarias/Atmega128API.o
+                                0xaa9 (size before relaxing)
+ .debug_str     0x00000c2f      0x213 build/default/debug/librarias/lcd.o
+                                0x3ed (size before relaxing)
 
-.debug_loc
+.debug_loc      0x00000000     0x31e6
  *(.debug_loc)
+ .debug_loc     0x00000000       0xcb build/default/debug/main.o
+ .debug_loc     0x000000cb     0x20b9 build/default/debug/librarias/Atmega128API.o
+ .debug_loc     0x00002184     0x1062 build/default/debug/librarias/lcd.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -837,10 +867,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges
+.debug_ranges   0x00000000      0x388
  *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 build/default/debug/main.o
+ .debug_ranges  0x00000018      0x280 build/default/debug/librarias/Atmega128API.o
+ .debug_ranges  0x00000298       0xf0 build/default/debug/librarias/lcd.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(dist/default/production/Atmega128Mplab_1.X.production.elf elf32-avr)
+OUTPUT(dist/default/debug/Atmega128Mplab_1.X.debug.elf elf32-avr)
 LOAD linker stubs

@@ -4,7 +4,7 @@ Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
 *************************************************************************/
 /***preamble inic***/
 #ifndef F_CPU
-	#define F_CPU 8000000UL
+	#define F_CPU 16000000UL
 #endif
 /*
 ** library
@@ -51,7 +51,7 @@ void LCD0_string(const char* s); // RAW
 void LCD0_string_size(const char* s, uint8_t size); // RAW
 void LCD0_hspace(uint8_t n);
 void LCD0_clear(void);
-void LCD0_gotoxy(unsigned int x, unsigned int y);
+void LCD0_gotoxy(unsigned int y, unsigned int x);
 void LCD0_strobe(unsigned int num);
 void LCD0_reboot(void);
 void LCD1_inic(void);
@@ -64,7 +64,7 @@ void LCD1_string(const char* s);
 void LCD1_string_size(const char* s, uint8_t size); // RAW
 void LCD1_hspace(uint8_t n);
 void LCD1_clear(void);
-void LCD1_gotoxy(unsigned int x, unsigned int y);
+void LCD1_gotoxy(unsigned int y, unsigned int x);
 void LCD1_strobe(unsigned int num);
 void LCD1_reboot(void);
 unsigned int LCD_ticks(unsigned int num);

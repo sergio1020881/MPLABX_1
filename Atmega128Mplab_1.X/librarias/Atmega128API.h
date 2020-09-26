@@ -226,9 +226,10 @@ UART API START
 	#define UART_TX_BUFFER_SIZE 32
 #endif
 /* test if the size of the circular buffers fits into SRAM */
-#if ( (UART_RX_BUFFER_SIZE+UART_TX_BUFFER_SIZE) >= (RAMEND-0x60 ) )
-	#error "size of UART_RX_BUFFER_SIZE + UART_TX_BUFFER_SIZE larger than size of SRAM"
-#endif
+//#if ( (UART_RX_BUFFER_SIZE+UART_TX_BUFFER_SIZE) >= (RAMEND-0x060) )
+//(RAMEND-0x60 )
+//	#error "size of UART_RX_BUFFER_SIZE + UART_TX_BUFFER_SIZE larger than size of SRAM"
+//#endif
 /* 
 ** high byte error return code of uart_getc()
 */

@@ -40,7 +40,7 @@ struct display{
 	void (*string_size)(const char* s, uint8_t size); // RAW
 	void (*hspace)(uint8_t n);
 	void (*clear)(void);
-	void (*gotoxy)(unsigned int x, unsigned int y);
+	void (*gotoxy)(unsigned int y, unsigned int x);
 	void (*reboot)(void);
 };
 typedef struct display LCD0;
