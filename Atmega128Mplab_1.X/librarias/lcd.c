@@ -134,9 +134,9 @@ void LCD0_inic(void)
 	_delay_us(37);
 	/***INICIALIZATION END***/
 	LCD0_write(0x1F,INST);// cursor or display shift
-	LCD0_BF();
+	_delay_us(39);
 	//LCD0_write(0x03,INST);// return home
-	//LCD0_BF();
+	//_delay_ms(1.53);
 }
 void LCD0_write(char c, unsigned short D_I)
 {
@@ -340,9 +340,9 @@ void LCD1_inic(void)
 	_delay_us(37);
 	/***INICIALIZATION END***/
 	LCD1_write(0x1F,INST);// cursor or display shift
-	LCD1_BF();
+	_delay_us(39);
 	//LCD1_write(0x03,INST);// return home
-	//LCD1_BF();
+	//_delay_ms(1.53);
 }
 void LCD1_write(char c, unsigned short D_I)
 {

@@ -1,30 +1,17 @@
 /*************************************************************************
-Title:    LCD
-Author:   Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
-File:     $Id: lcd.c,v 0.2 2015/4/11 00:00:00 sergio Exp $
-Software: AVR-GCC 4.1, AVR Libc 1.4.6 or higher
-Hardware: AVR with built-in ADC, tested on ATmega128 at 16 Mhz, 
-License:  GNU General Public License        
-DESCRIPTION:
-	Atemga 128 at 16Mhz
-USAGE:
-    Refere to the header file lcd.h for a description of the routines.
-NOTES:
-    Based on Atmel Application Note AVR306
-LICENSE:
-    Copyright (C) 2014
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-COMMENT:
-	tested Atemga128 16Mhz and Atmega328 8Mhz
-	reviewed 09/04/2015, stable                    
-*************************************************************************/
+Title:		
+	LCD API
+Author:		
+	Sergio Santos 
+	<sergio.salazar.santos@gmail.com>
+File:		
+	$Id: lcd.c, v 27/09/2020 Exp $
+License:	
+	GNU General Public License        
+Comment:
+	Tested Atemga128 16Mhz and Atmega328 8Mhz
+	reviewed 27/09/2020                    
+************************************************************************/
 #ifndef F_CPU
 	#define F_CPU 16000000UL
 #endif
@@ -47,6 +34,7 @@ COMMENT:
 #define DATA 1
 //ticks depends on CPU frequency this case 16Mhz
 #define LCD_N_TICKS 1
+#define LCD_BF_TICKS 20
 /*
 ** variable
 */
@@ -71,7 +59,7 @@ void LCD0_string(const char* s); // RAW
 void LCD0_string_size(const char* s, uint8_t size); // RAW
 void LCD0_hspace(uint8_t n);
 void LCD0_clear(void);
-void LCD0_gotoxy(unsigned int x, unsigned int y);
+void LCD0_gotoxy(unsigned int y, unsigned int x);
 void LCD0_strobe(unsigned int num);
 void LCD0_reboot(void);
 void LCD1_inic(void);
@@ -84,7 +72,7 @@ void LCD1_string(const char* s);
 void LCD1_string_size(const char* s, uint8_t size); // RAW
 void LCD1_hspace(uint8_t n);
 void LCD1_clear(void);
-void LCD1_gotoxy(unsigned int x, unsigned int y);
+void LCD1_gotoxy(unsigned int y, unsigned int x);
 void LCD1_strobe(unsigned int num);
 void LCD1_reboot(void);
 unsigned int LCD_ticks(unsigned int num);
@@ -133,14 +121,10 @@ void LCD0_inic(void)
 	/***INICIALIZACAO LCD**datasheet*/
 	_delay_ms(40);
 	LCD0_write(0x33,INST); //function set
-	//_delay_ms(40);
-	//lcd->write(lcd,0x33,INST); //function set
+	_delay_us(39);
+	LCD0_write(0x33,INST); //function set
 	_delay_us(39);
 	LCD0_write(0x2B,INST); //function set
-	_delay_us(39);
-	LCD0_write(0x2B,INST); //function set
-	//_delay_us(39);
-	//lcd->write(0x2B,INST); //function set
 	_delay_us(37);
 	LCD0_write(0x0C,INST);// display on/off control
 	_delay_us(37);
@@ -150,49 +134,49 @@ void LCD0_inic(void)
 	_delay_us(37);
 	/***INICIALIZATION END***/
 	LCD0_write(0x1F,INST);// cursor or display shift
-	LCD0_BF();
-	LCD0_write(0x03,INST);// return home
-	LCD0_BF();
+	_delay_us(39);
+	//LCD0_write(0x03,INST);// return home
+	//_delay_ms(1.53);
 }
 void LCD0_write(char c, unsigned short D_I)
 {
 	*lcd0_PORT&=~(1<<RW);//lcd as input WRITE INSTRUCTION
 	if(D_I) *lcd0_PORT|=(1<<RS); else *lcd0_PORT&=~(1<<RS);
-	*lcd0_DDR|=(1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3);//mcu as output
+	*lcd0_DDR|=(1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7);//mcu as output
 	*lcd0_PORT|=(1<<EN);
-	if(c & 0x80) *lcd0_PORT|=1<<DB3; else *lcd0_PORT&=~(1<<DB3);
-	if(c & 0x40) *lcd0_PORT|=1<<DB2; else *lcd0_PORT&=~(1<<DB2);
-	if(c & 0x20) *lcd0_PORT|=1<<DB1; else *lcd0_PORT&=~(1<<DB1);
-	if(c & 0x10) *lcd0_PORT|=1<<DB0; else *lcd0_PORT&=~(1<<DB0);
+	if(c & 0x80) *lcd0_PORT|=1<<DB7; else *lcd0_PORT&=~(1<<DB7);
+	if(c & 0x40) *lcd0_PORT|=1<<DB6; else *lcd0_PORT&=~(1<<DB6);
+	if(c & 0x20) *lcd0_PORT|=1<<DB5; else *lcd0_PORT&=~(1<<DB5);
+	if(c & 0x10) *lcd0_PORT|=1<<DB4; else *lcd0_PORT&=~(1<<DB4);
 	*lcd0_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	*lcd0_PORT|=(1<<EN);
-	if(c & 0x08) *lcd0_PORT|=1<<DB3; else *lcd0_PORT&=~(1<<DB3);
-	if(c & 0x04) *lcd0_PORT|=1<<DB2; else *lcd0_PORT&=~(1<<DB2);
-	if(c & 0x02) *lcd0_PORT|=1<<DB1; else *lcd0_PORT&=~(1<<DB1);
-	if(c & 0x01) *lcd0_PORT|=1<<DB0; else *lcd0_PORT&=~(1<<DB0);
+	if(c & 0x08) *lcd0_PORT|=1<<DB7; else *lcd0_PORT&=~(1<<DB7);
+	if(c & 0x04) *lcd0_PORT|=1<<DB6; else *lcd0_PORT&=~(1<<DB6);
+	if(c & 0x02) *lcd0_PORT|=1<<DB5; else *lcd0_PORT&=~(1<<DB5);
+	if(c & 0x01) *lcd0_PORT|=1<<DB4; else *lcd0_PORT&=~(1<<DB4);
 	*lcd0_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 }
 char LCD0_read(unsigned short D_I)
 {
 	char c=0x00;
-	*lcd0_DDR&=~((1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3));//mcu as input
-	*lcd0_PORT|=(1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3);//pullup resistors
+	*lcd0_DDR&=~((1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7));//mcu as input
+	*lcd0_PORT|=(1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7);//pullup resistors
 	*lcd0_PORT|=(1<<RW);//lcd as output READ INSTRUCTION
 	if(D_I) *lcd0_PORT|=(1<<RS); else *lcd0_PORT&=~(1<<RS);
 	*lcd0_PORT|=(1<<EN);
-	if(*lcd0_PIN & (1<<DB3)) c|=1<<7; else c&=~(1<<7);
-	if(*lcd0_PIN & (1<<DB2)) c|=1<<6; else c&=~(1<<6);
-	if(*lcd0_PIN & (1<<DB1)) c|=1<<5; else c&=~(1<<5);
-	if(*lcd0_PIN & (1<<DB0)) c|=1<<4; else c&=~(1<<4);
+	if(*lcd0_PIN & (1<<DB7)) c|=1<<7; else c&=~(1<<7);
+	if(*lcd0_PIN & (1<<DB6)) c|=1<<6; else c&=~(1<<6);
+	if(*lcd0_PIN & (1<<DB5)) c|=1<<5; else c&=~(1<<5);
+	if(*lcd0_PIN & (1<<DB4)) c|=1<<4; else c&=~(1<<4);
 	*lcd0_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	*lcd0_PORT|=(1<<EN);
-	if(*lcd0_PIN & (1<<DB3)) c|=1<<3; else c&=~(1<<3);
-	if(*lcd0_PIN & (1<<DB2)) c|=1<<2; else c&=~(1<<2);
-	if(*lcd0_PIN & (1<<DB1)) c|=1<<1; else c&=~(1<<1);
-	if(*lcd0_PIN & (1<<DB0)) c|=1<<0; else c&=~(1<<0);
+	if(*lcd0_PIN & (1<<DB7)) c|=1<<3; else c&=~(1<<3);
+	if(*lcd0_PIN & (1<<DB6)) c|=1<<2; else c&=~(1<<2);
+	if(*lcd0_PIN & (1<<DB5)) c|=1<<1; else c&=~(1<<1);
+	if(*lcd0_PIN & (1<<DB4)) c|=1<<0; else c&=~(1<<0);
 	*lcd0_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	return c;
@@ -203,7 +187,7 @@ void LCD0_BF(void)
 	char inst=0x80;
 	for(i=0;0x80&inst;i++){
 		inst=LCD0_read(INST);
-		LCD_ticks(LCD_N_TICKS);
+		LCD_ticks(LCD_BF_TICKS);
 		if(i>10)// if something goes wrong
 			break;
 	}
@@ -259,7 +243,7 @@ void LCD0_clear(void)
 	LCD0_write(0x01,INST);
 	LCD0_BF();
 }
-void LCD0_gotoxy(unsigned int x, unsigned int y)
+void LCD0_gotoxy(unsigned int y, unsigned int x)
 {
 	switch(y){
 		case 0:
@@ -268,6 +252,14 @@ void LCD0_gotoxy(unsigned int x, unsigned int y)
 			break;
 		case 1:
 			LCD0_write((0xC0+x),INST);
+			LCD0_BF();
+			break;
+		case 2:
+			LCD0_write((0x94+x),INST);//0x94
+			LCD0_BF();
+			break;
+		case 3:
+			LCD0_write((0xD4+x),INST);//0xD4
 			LCD0_BF();
 			break;
 		default:
@@ -335,14 +327,10 @@ void LCD1_inic(void)
 	/***INICIALIZACAO LCD**datasheet*/
 	_delay_ms(40);
 	LCD1_write(0x33,INST); //function set
-	//_delay_ms(40);
-	//lcd->write(lcd,0x33,INST); //function set
+	_delay_us(39);
+	LCD1_write(0x33,INST); //function set
 	_delay_us(39);
 	LCD1_write(0x2B,INST); //function set
-	_delay_us(39);
-	LCD1_write(0x2B,INST); //function set
-	//_delay_us(39);
-	//lcd->write(0x2B,INST); //function set
 	_delay_us(37);
 	LCD1_write(0x0C,INST);// display on/off control
 	_delay_us(37);
@@ -352,49 +340,49 @@ void LCD1_inic(void)
 	_delay_us(37);
 	/***INICIALIZATION END***/
 	LCD1_write(0x1F,INST);// cursor or display shift
-	LCD1_BF();
-	LCD1_write(0x03,INST);// return home
-	LCD1_BF();
+	_delay_us(39);
+	//LCD1_write(0x03,INST);// return home
+	//_delay_ms(1.53);
 }
 void LCD1_write(char c, unsigned short D_I)
 {
 	*lcd1_PORT&=~(1<<RW);//lcd as input WRITE INSTRUCTION
 	if(D_I) *lcd1_PORT|=(1<<RS); else *lcd1_PORT&=~(1<<D_I);
-	*lcd1_DDR|=(1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3);//mcu as output
+	*lcd1_DDR|=(1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7);//mcu as output
 	*lcd1_PORT|=(1<<EN);
-	if(c & 0x80) *lcd1_PORT|=1<<DB3; else *lcd1_PORT&=~(1<<DB3);
-	if(c & 0x40) *lcd1_PORT|=1<<DB2; else *lcd1_PORT&=~(1<<DB2);
-	if(c & 0x20) *lcd1_PORT|=1<<DB1; else *lcd1_PORT&=~(1<<DB1);
-	if(c & 0x10) *lcd1_PORT|=1<<DB0; else *lcd1_PORT&=~(1<<DB0);
+	if(c & 0x80) *lcd1_PORT|=1<<DB7; else *lcd1_PORT&=~(1<<DB7);
+	if(c & 0x40) *lcd1_PORT|=1<<DB6; else *lcd1_PORT&=~(1<<DB6);
+	if(c & 0x20) *lcd1_PORT|=1<<DB5; else *lcd1_PORT&=~(1<<DB5);
+	if(c & 0x10) *lcd1_PORT|=1<<DB4; else *lcd1_PORT&=~(1<<DB4);
 	*lcd1_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	*lcd1_PORT|=(1<<EN);
-	if(c & 0x08) *lcd1_PORT|=1<<DB3; else *lcd1_PORT&=~(1<<DB3);
-	if(c & 0x04) *lcd1_PORT|=1<<DB2; else *lcd1_PORT&=~(1<<DB2);
-	if(c & 0x02) *lcd1_PORT|=1<<DB1; else *lcd1_PORT&=~(1<<DB1);
-	if(c & 0x01) *lcd1_PORT|=1<<DB0; else *lcd1_PORT&=~(1<<DB0);
+	if(c & 0x08) *lcd1_PORT|=1<<DB7; else *lcd1_PORT&=~(1<<DB7);
+	if(c & 0x04) *lcd1_PORT|=1<<DB6; else *lcd1_PORT&=~(1<<DB6);
+	if(c & 0x02) *lcd1_PORT|=1<<DB5; else *lcd1_PORT&=~(1<<DB5);
+	if(c & 0x01) *lcd1_PORT|=1<<DB4; else *lcd1_PORT&=~(1<<DB4);
 	*lcd1_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 }
 char LCD1_read(unsigned short D_I)
 {
 	char c=0x00;
-	*lcd1_DDR&=~((1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3));//mcu as input
-	*lcd1_PORT|=(1<<DB0)|(1<<DB1)|(1<<DB2)|(1<<DB3);//pullup resistors
+	*lcd1_DDR&=~((1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7));//mcu as input
+	*lcd1_PORT|=(1<<DB4)|(1<<DB5)|(1<<DB6)|(1<<DB7);//pullup resistors
 	*lcd1_PORT|=(1<<RW);//lcd as output READ INSTRUCTION
 	if(D_I) *lcd1_PORT|=(1<<RS); else *lcd1_PORT&=~(1<<D_I);
 	*lcd1_PORT|=(1<<EN);
-	if(*lcd1_PIN & (1<<DB3)) c|=1<<7; else c&=~(1<<7);
-	if(*lcd1_PIN & (1<<DB2)) c|=1<<6; else c&=~(1<<6);
-	if(*lcd1_PIN & (1<<DB1)) c|=1<<5; else c&=~(1<<5);
-	if(*lcd1_PIN & (1<<DB0)) c|=1<<4; else c&=~(1<<4);
+	if(*lcd1_PIN & (1<<DB7)) c|=1<<7; else c&=~(1<<7);
+	if(*lcd1_PIN & (1<<DB6)) c|=1<<6; else c&=~(1<<6);
+	if(*lcd1_PIN & (1<<DB5)) c|=1<<5; else c&=~(1<<5);
+	if(*lcd1_PIN & (1<<DB4)) c|=1<<4; else c&=~(1<<4);
 	*lcd1_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	*lcd1_PORT|=(1<<EN);
-	if(*lcd1_PIN & (1<<DB3)) c|=1<<3; else c&=~(1<<3);
-	if(*lcd1_PIN & (1<<DB2)) c|=1<<2; else c&=~(1<<2);
-	if(*lcd1_PIN & (1<<DB1)) c|=1<<1; else c&=~(1<<1);
-	if(*lcd1_PIN & (1<<DB0)) c|=1<<0; else c&=~(1<<0);
+	if(*lcd1_PIN & (1<<DB7)) c|=1<<3; else c&=~(1<<3);
+	if(*lcd1_PIN & (1<<DB6)) c|=1<<2; else c&=~(1<<2);
+	if(*lcd1_PIN & (1<<DB5)) c|=1<<1; else c&=~(1<<1);
+	if(*lcd1_PIN & (1<<DB4)) c|=1<<0; else c&=~(1<<0);
 	*lcd1_PORT&=~(1<<EN);
 	LCD_ticks(LCD_N_TICKS);
 	return c;
@@ -405,7 +393,7 @@ void LCD1_BF(void)
 	char inst=0x80;
 	for(i=0;0x80&inst;i++){
 		inst=LCD1_read(INST);
-		LCD_ticks(LCD_N_TICKS);
+		LCD_ticks(LCD_BF_TICKS);
 		if(i>10)// if something goes wrong
 			break;
 	}
@@ -461,7 +449,7 @@ void LCD1_clear(void)
 	LCD1_write(0x01,INST);
 	LCD1_BF();
 }
-void LCD1_gotoxy(unsigned int x, unsigned int y)
+void LCD1_gotoxy(unsigned int y, unsigned int x)
 {
 	switch(y){
 		case 0:
@@ -470,6 +458,14 @@ void LCD1_gotoxy(unsigned int x, unsigned int y)
 			break;
 		case 1:
 			LCD1_write((0xC0+x),INST);
+			LCD1_BF();
+			break;
+		case 2:
+			LCD1_write((0x94+x),INST);//0x94
+			LCD1_BF();
+			break;
+		case 3:
+			LCD1_write((0xD4+x),INST);//0xD4
 			LCD1_BF();
 			break;
 		default:
@@ -506,5 +502,5 @@ unsigned int LCD_ticks(unsigned int num)
 */
 /***EOF***/
 /***COMMENTS
-DO NOT BOTHER SAYING THERE IS REPEATED CODE, I KNOW.
+LCD API END
 ***/
