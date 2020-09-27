@@ -256,7 +256,6 @@ void LCD0_gotoxy(unsigned int y, unsigned int x)
 			LCD0_BF();
 			break;
 		default:
-			LCD0_BF();
 			break;
 	}
 }
@@ -321,14 +320,10 @@ void LCD1_inic(void)
 	/***INICIALIZACAO LCD**datasheet*/
 	_delay_ms(40);
 	LCD1_write(0x33,INST); //function set
-	//_delay_ms(40);
-	//lcd->write(lcd,0x33,INST); //function set
+	_delay_us(39);
+	LCD1_write(0x33,INST); //function set
 	_delay_us(39);
 	LCD1_write(0x2B,INST); //function set
-	_delay_us(39);
-	LCD1_write(0x2B,INST); //function set
-	//_delay_us(39);
-	//lcd->write(0x2B,INST); //function set
 	_delay_us(37);
 	LCD1_write(0x0C,INST);// display on/off control
 	_delay_us(37);
@@ -339,8 +334,8 @@ void LCD1_inic(void)
 	/***INICIALIZATION END***/
 	LCD1_write(0x1F,INST);// cursor or display shift
 	LCD1_BF();
-	LCD1_write(0x03,INST);// return home
-	LCD1_BF();
+	//LCD1_write(0x03,INST);// return home
+	//LCD1_BF();
 }
 void LCD1_write(char c, unsigned short D_I)
 {
@@ -391,7 +386,7 @@ void LCD1_BF(void)
 	char inst=0x80;
 	for(i=0;0x80&inst;i++){
 		inst=LCD1_read(INST);
-		LCD_ticks(LCD_N_TICKS);
+		LCD_ticks(LCD_BF_TICKS);
 		if(i>10)// if something goes wrong
 			break;
 	}
@@ -467,7 +462,6 @@ void LCD1_gotoxy(unsigned int y, unsigned int x)
 			LCD1_BF();
 			break;
 		default:
-			LCD1_BF();
 			break;
 	}
 }
