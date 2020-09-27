@@ -24,9 +24,6 @@
     </logicalFolder>
     <itemPath>main.c</itemPath>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>librarias</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -35,7 +32,7 @@
         <targetDevice>ATmega128</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>AtmelIceTool</platformTool>
         <languageToolchain>AVR</languageToolchain>
         <languageToolchainVersion>5.4.0</languageToolchainVersion>
         <platform>3</platform>
@@ -172,7 +169,7 @@
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface" value="jtag"/>
+        <property key="communication.interface" value="isp"/>
         <property key="communication.speed" value="0.200"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="firmware.path"

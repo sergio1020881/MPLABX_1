@@ -27,6 +27,7 @@ Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
 #define DATA 1
 //ticks depends on CPU frequency this case 16Mhz
 #define LCD_N_TICKS 1
+#define LCD_BF_TICKS 20
 /*
 ** variable
 */
@@ -113,14 +114,10 @@ void LCD0_inic(void)
 	/***INICIALIZACAO LCD**datasheet*/
 	_delay_ms(40);
 	LCD0_write(0x33,INST); //function set
-	//_delay_ms(40);
-	//lcd->write(lcd,0x33,INST); //function set
+	_delay_us(39);
+	LCD0_write(0x33,INST); //function set
 	_delay_us(39);
 	LCD0_write(0x2B,INST); //function set
-	_delay_us(39);
-	LCD0_write(0x2B,INST); //function set
-	//_delay_us(39);
-	//lcd->write(0x2B,INST); //function set
 	_delay_us(37);
 	LCD0_write(0x0C,INST);// display on/off control
 	_delay_us(37);
@@ -131,8 +128,8 @@ void LCD0_inic(void)
 	/***INICIALIZATION END***/
 	LCD0_write(0x1F,INST);// cursor or display shift
 	LCD0_BF();
-	LCD0_write(0x03,INST);// return home
-	LCD0_BF();
+	//LCD0_write(0x03,INST);// return home
+	//LCD0_BF();
 }
 void LCD0_write(char c, unsigned short D_I)
 {
@@ -183,7 +180,7 @@ void LCD0_BF(void)
 	char inst=0x80;
 	for(i=0;0x80&inst;i++){
 		inst=LCD0_read(INST);
-		LCD_ticks(LCD_N_TICKS);
+		LCD_ticks(LCD_BF_TICKS);
 		if(i>10)// if something goes wrong
 			break;
 	}
@@ -259,6 +256,7 @@ void LCD0_gotoxy(unsigned int y, unsigned int x)
 			LCD0_BF();
 			break;
 		default:
+			LCD0_BF();
 			break;
 	}
 }
@@ -469,6 +467,7 @@ void LCD1_gotoxy(unsigned int y, unsigned int x)
 			LCD1_BF();
 			break;
 		default:
+			LCD1_BF();
 			break;
 	}
 }

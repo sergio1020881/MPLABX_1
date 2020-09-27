@@ -46,9 +46,9 @@ int main(int argc, char** argv) {
 	while(TRUE){
 		lcd0.reboot();
 		//TODO:: Please write your application code
-		lcd0.gotoxy(0,0);
+		lcd0.gotoxy(0,4);
 		lcd0.string_size("Ola Sergio",10);
-		lcd0.gotoxy(1,0);
+		lcd0.gotoxy(1,2);
 		lcd0.string_size("Bom trabalho",12);
 	}
     return (EXIT_SUCCESS);
