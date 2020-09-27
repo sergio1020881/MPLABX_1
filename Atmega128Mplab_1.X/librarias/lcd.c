@@ -1,21 +1,28 @@
 /*************************************************************************
-LCD API START
-Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
-*************************************************************************/
-/***preamble inic***/
+Title:		
+	LCD API
+Author:		
+	Sergio Santos 
+	<sergio.salazar.santos@gmail.com>
+File:		
+	$Id: lcd.c, v 27/09/2020 Exp $
+License:	
+	GNU General Public License        
+Comment:
+	Tested Atemga128 16Mhz and Atmega328 8Mhz
+	reviewed 27/09/2020                    
+************************************************************************/
 #ifndef F_CPU
 	#define F_CPU 16000000UL
 #endif
 /*
-** library
+** Library
 */
 #include <avr/io.h>
-//#include <avr/pgmspace.h>
 #include <util/delay.h>
-//#include <stdarg.h>
 #include <inttypes.h>
+/***/
 #include "lcd.h"
-/***preamble inic***/
 /*
 ** constant and macro
 */
@@ -487,12 +494,13 @@ unsigned int LCD_ticks(unsigned int num)
 {
 	unsigned int count;
 	for(count=0;count<num;count++)
-	;
+		;
 	return count;
 }
 /*
 ** interrupt
 */
-/*************************************************************************
+/***EOF***/
+/***COMMENTS
 LCD API END
-*************************************************************************/
+***/

@@ -1,19 +1,26 @@
 /************************************************************************
-LCD API START
-Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
+Title:
+	LCD API
+Author:
+	Sergio Santos 
+	<sergio.salazar.santos@gmail.com>
+File:
+	$Id: lcd.h,v 27/09/2020 Exp $
+License:  
+	GNU General Public License
+Comment:
+	tested Atemga128 16Mhz and Atmega328 8Mhz
+	reviewed 27/09/2020
 ************************************************************************/
-/***preamble inic***/
 #ifndef _LCD_H_
 	#define _LCD_H_
-/**@{*/
-#if (__GNUC__ * 100 + __GNUC_MINOR__) < 304
-	#error "This library requires AVR-GCC 3.4 or later, update to newer AVR-GCC compiler !"
-#endif
+//#if (__GNUC__ * 100 + __GNUC_MINOR__) < 304
+//	#error "This library requires AVR-GCC 3.4 or later, update to newer AVR-GCC compiler !"
+//#enfif
 /*
 ** Library
 */
 #include <inttypes.h>
-/***preamble inic***/
 /*
 ** constant and macro
 */
@@ -50,9 +57,8 @@ typedef struct display LCD1;
 */
 LCD0 LCD0enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port);
 LCD1 LCD1enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port);
-/***preamble inic***/
 #endif
-/***preamble inic***/
-/************************************************************************
-LCD API END
-************************************************************************/
+/***COMMENT
+LCD API HEADER END
+***/
+/***EOF***/
