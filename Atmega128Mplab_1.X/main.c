@@ -2,7 +2,7 @@
 Title: ATMEGA 128
 Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
 File: main.c 2020/09/26 14:00:00
-Software: Atmel Studio 7 (Version: 7.0.1931)
+Software: MPLAB X IDE v5.40
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA: lcd display 2x16 or 4x20
 	-16Mhz
@@ -13,6 +13,8 @@ LICENSE:
 COMMENT:
 	stable
 ************************************************************************/
+/***preamble inic***/
+#define F_CPU 16000000UL
 /*
 ** library
 */
@@ -24,8 +26,6 @@ COMMENT:
 #include <inttypes.h>
 #include "librarias/Atmega128API.h"
 #include "librarias/lcd.h"
-/***preamble inic***/
-#define F_CPU 16000000UL
 /*
 ** constant and macro
 */
@@ -39,6 +39,9 @@ COMMENT:
 ** procedure and function header
 */
 void PORTINIT();
+/*
+ ** MAIN
+ */
 int main(int argc, char** argv) {
     PORTINIT();
 	/***INICIALIZE OBJECTS***/
@@ -65,5 +68,7 @@ void PORTINIT()
 /*
 ** interrupt
 */
+
+
 /*************************************************************************
 *************************************************************************/
