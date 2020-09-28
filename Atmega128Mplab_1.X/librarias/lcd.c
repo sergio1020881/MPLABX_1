@@ -133,8 +133,8 @@ void LCD0_inic(void)
 	LCD0_write(0x06,INST);// entry mode set (crazy settings)
 	_delay_us(37);
 	/***INICIALIZATION END***/
-	LCD0_write(0x1F,INST);// cursor or display shift
-	_delay_us(39);
+	//LCD0_write(0x1F,INST);// cursor or display shift
+	//_delay_us(39);
 	//LCD0_write(0x03,INST);// return home
 	//_delay_ms(1.53);
 }
@@ -339,8 +339,8 @@ void LCD1_inic(void)
 	LCD1_write(0x06,INST);// entry mode set (crazy settings)
 	_delay_us(37);
 	/***INICIALIZATION END***/
-	LCD1_write(0x1F,INST);// cursor or display shift
-	_delay_us(39);
+	//LCD1_write(0x1F,INST);// cursor or display shift
+	//_delay_us(39);
 	//LCD1_write(0x03,INST);// return home
 	//_delay_ms(1.53);
 }
