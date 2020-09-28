@@ -1,12 +1,12 @@
 /************************************************************************
-Title: 
+Title:
     ATMEGA 128
-Author: 
-    Sergio Santos 
-    sergio.salazar.santos@gmail.com>
-File: 
+Author:
+    Sergio Santos
+    <sergio.salazar.santos@gmail.com>
+File:
     main.c 2020/09/26 14:00:00
-Software: 
+Software:
     MPLAB X IDE v5.40
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA: lcd display 2x16 or 4x20
@@ -28,6 +28,7 @@ Comment:
 #include <inttypes.h>
 #include "librarias/Atmega128API.h"
 #include "librarias/lcd.h"
+#include "librarias/function.h"
 /*
 ** constant and macro
 */
@@ -48,6 +49,9 @@ int main(int argc, char** argv) {
     PORTINIT();
 	/***INICIALIZE OBJECTS***/
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
+    FUNC func = FUNCenable();
+    
+    
 	while(TRUE){
 		lcd0.reboot();
 		//TODO:: Please write your application code
@@ -55,7 +59,7 @@ int main(int argc, char** argv) {
 		lcd0.string_size("Boot up",7);
 		lcd0.gotoxy(1,2);
 		lcd0.string_size("Run",3);
-        //PORTC+=1;
+        PORTC=PINB;
         
         
         

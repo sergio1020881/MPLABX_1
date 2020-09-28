@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=librarias/Atmega128API.c librarias/lcd.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=librarias/Atmega128API.c librarias/lcd.c main.c librarias/function.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/librarias/Atmega128API.o ${OBJECTDIR}/librarias/lcd.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/librarias/Atmega128API.o.d ${OBJECTDIR}/librarias/lcd.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/librarias/Atmega128API.o ${OBJECTDIR}/librarias/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/librarias/function.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/librarias/Atmega128API.o.d ${OBJECTDIR}/librarias/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/librarias/function.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/librarias/Atmega128API.o ${OBJECTDIR}/librarias/lcd.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/librarias/Atmega128API.o ${OBJECTDIR}/librarias/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/librarias/function.o
 
 # Source Files
-SOURCEFILES=librarias/Atmega128API.c librarias/lcd.c main.c
+SOURCEFILES=librarias/Atmega128API.c librarias/lcd.c main.c librarias/function.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -128,6 +128,12 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/main.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/librarias/function.o: librarias/function.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/librarias" 
+	@${RM} ${OBJECTDIR}/librarias/function.o.d 
+	@${RM} ${OBJECTDIR}/librarias/function.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/librarias/function.o.d" -MT "${OBJECTDIR}/librarias/function.o.d" -MT ${OBJECTDIR}/librarias/function.o  -o ${OBJECTDIR}/librarias/function.o librarias/function.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/librarias/Atmega128API.o: librarias/Atmega128API.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/librarias" 
@@ -146,6 +152,12 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/librarias/function.o: librarias/function.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/librarias" 
+	@${RM} ${OBJECTDIR}/librarias/function.o.d 
+	@${RM} ${OBJECTDIR}/librarias/function.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/librarias/function.o.d" -MT "${OBJECTDIR}/librarias/function.o.d" -MT ${OBJECTDIR}/librarias/function.o  -o ${OBJECTDIR}/librarias/function.o librarias/function.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 

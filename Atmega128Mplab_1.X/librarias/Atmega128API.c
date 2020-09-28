@@ -2461,7 +2461,7 @@ UART1 UART1enable(unsigned int baudrate, unsigned int FDbits, unsigned int Stopb
 				case 2:
 					UCSR1C |= (1<<USBS1);
 					uart.Stopbits=2;
-					break;	
+					break;
 				default:
 					UCSR1C &= ~(1<<USBS1);
 					uart.Stopbits=1;

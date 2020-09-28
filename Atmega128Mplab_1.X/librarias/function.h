@@ -22,12 +22,16 @@ COMMENT:
 #ifndef _FUNCTION_H_
 	#define _FUNCTION_H_
 /*
+** Library
+*/
+#include <inttypes.h>
+/*
 ** constant and macro
 */
 /*
 ** variable
 */
-struct FUNC{
+struct function{
 	/***PROTOTYPES VTABLE***/
 	unsigned int (*power)(uint8_t base, uint8_t n);
 	int (*stringlength)(const char string[]);
@@ -76,7 +80,7 @@ struct FUNC{
 	int (*readint)(int nmin, int nmax);
 	*/
 };
-typedef struct FUNC FUNC;
+typedef struct function FUNC;
 /*
 ** procedure and function header
 */
