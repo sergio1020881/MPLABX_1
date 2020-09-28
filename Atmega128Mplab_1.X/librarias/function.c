@@ -22,6 +22,7 @@ LICENSE:
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 COMMENT:
+    Always try to make general purpose bullet proof functions !!
 	Very Stable
 *************************************************************************/
 /*

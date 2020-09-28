@@ -13,6 +13,7 @@ Comment:
 	reviewed 27/09/2020                    
 ************************************************************************/
 #ifndef F_CPU
+/***Mandatory to use util/delay.h***/
 	#define F_CPU 16000000UL
 #endif
 /*

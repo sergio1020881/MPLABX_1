@@ -551,7 +551,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x13de
+.text           0x00000000     0x1446
  *(.vectors)
  .vectors       0x00000000       0x8c C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/ATmega_DFP/2.2.108/gcc/dev/atmega128/avr51/crtatmega128.o
                 0x00000000                __vector_default
@@ -698,145 +698,145 @@ END GROUP
  .text.PORTINIT
                 0x000008be       0x12 build/default/production/main.o
                 0x000008be                PORTINIT
- .text.main     0x000008d0       0x76 build/default/production/main.o
+ .text.main     0x000008d0       0xde build/default/production/main.o
                 0x000008d0                main
  .text.FUNCpinmatch
-                0x00000946       0x14 build/default/production/librarias/function.o
-                0x00000946                FUNCpinmatch
+                0x000009ae       0x14 build/default/production/librarias/function.o
+                0x000009ae                FUNCpinmatch
  .text.FUNChmerge
-                0x0000095a        0x4 build/default/production/librarias/function.o
-                0x0000095a                FUNChmerge
+                0x000009c2        0x4 build/default/production/librarias/function.o
+                0x000009c2                FUNChmerge
  .text.FUNClmerge
-                0x0000095e        0x4 build/default/production/librarias/function.o
-                0x0000095e                FUNClmerge
- .text.FUNChh   0x00000962        0x4 build/default/production/librarias/function.o
-                0x00000962                FUNChh
- .text.FUNCll   0x00000966        0x6 build/default/production/librarias/function.o
-                0x00000966                FUNCll
- .text.FUNClh   0x0000096c        0x6 build/default/production/librarias/function.o
-                0x0000096c                FUNClh
- .text.FUNChl   0x00000972        0x6 build/default/production/librarias/function.o
-                0x00000972                FUNChl
+                0x000009c6        0x4 build/default/production/librarias/function.o
+                0x000009c6                FUNClmerge
+ .text.FUNChh   0x000009ca        0x4 build/default/production/librarias/function.o
+                0x000009ca                FUNChh
+ .text.FUNCll   0x000009ce        0x6 build/default/production/librarias/function.o
+                0x000009ce                FUNCll
+ .text.FUNClh   0x000009d4        0x6 build/default/production/librarias/function.o
+                0x000009d4                FUNClh
+ .text.FUNChl   0x000009da        0x6 build/default/production/librarias/function.o
+                0x000009da                FUNChl
  .text.FUNCdiff
-                0x00000978        0x4 build/default/production/librarias/function.o
-                0x00000978                FUNCdiff
+                0x000009e0        0x4 build/default/production/librarias/function.o
+                0x000009e0                FUNCdiff
  .text.FUNCswap
-                0x0000097c       0x42 build/default/production/librarias/function.o
-                0x0000097c                FUNCswap
+                0x000009e4       0x42 build/default/production/librarias/function.o
+                0x000009e4                FUNCswap
  .text.FUNCcopy
-                0x000009be       0x1c build/default/production/librarias/function.o
-                0x000009be                FUNCcopy
+                0x00000a26       0x1c build/default/production/librarias/function.o
+                0x00000a26                FUNCcopy
  .text.FUNCsqueeze
-                0x000009da       0x44 build/default/production/librarias/function.o
-                0x000009da                FUNCsqueeze
+                0x00000a42       0x44 build/default/production/librarias/function.o
+                0x00000a42                FUNCsqueeze
  .text.FUNCshellsort
-                0x00000a1e      0x14c build/default/production/librarias/function.o
-                0x00000a1e                FUNCshellsort
+                0x00000a86      0x14c build/default/production/librarias/function.o
+                0x00000a86                FUNCshellsort
  .text.FUNCpmax
-                0x00000b6a        0xa build/default/production/librarias/function.o
-                0x00000b6a                FUNCpmax
- .text.FUNCgcd  0x00000b74       0x1e build/default/production/librarias/function.o
-                0x00000b74                FUNCgcd
+                0x00000bd2        0xa build/default/production/librarias/function.o
+                0x00000bd2                FUNCpmax
+ .text.FUNCgcd  0x00000bdc       0x1e build/default/production/librarias/function.o
+                0x00000bdc                FUNCgcd
  .text.FUNCstrToInt
-                0x00000b92       0x48 build/default/production/librarias/function.o
-                0x00000b92                FUNCstrToInt
+                0x00000bfa       0x48 build/default/production/librarias/function.o
+                0x00000bfa                FUNCstrToInt
  .text.FUNCfilter
-                0x00000bda        0x4 build/default/production/librarias/function.o
-                0x00000bda                FUNCfilter
+                0x00000c42        0x4 build/default/production/librarias/function.o
+                0x00000c42                FUNCfilter
  .text.FUNCticks
-                0x00000bde       0x14 build/default/production/librarias/function.o
-                0x00000bde                FUNCticks
+                0x00000c46       0x14 build/default/production/librarias/function.o
+                0x00000c46                FUNCticks
  .text.FUNCtwocomptoint8bit
-                0x00000bf2       0x1a build/default/production/librarias/function.o
-                0x00000bf2                FUNCtwocomptoint8bit
+                0x00000c5a       0x1a build/default/production/librarias/function.o
+                0x00000c5a                FUNCtwocomptoint8bit
  .text.FUNCtwocomptoint10bit
-                0x00000c0c       0x18 build/default/production/librarias/function.o
-                0x00000c0c                FUNCtwocomptoint10bit
+                0x00000c74       0x18 build/default/production/librarias/function.o
+                0x00000c74                FUNCtwocomptoint10bit
  .text.FUNCtwocomptointnbit
-                0x00000c24       0x30 build/default/production/librarias/function.o
-                0x00000c24                FUNCtwocomptointnbit
+                0x00000c8c       0x30 build/default/production/librarias/function.o
+                0x00000c8c                FUNCtwocomptointnbit
  .text.FUNCdec2bcd
-                0x00000c54       0x26 build/default/production/librarias/function.o
-                0x00000c54                FUNCdec2bcd
+                0x00000cbc       0x26 build/default/production/librarias/function.o
+                0x00000cbc                FUNCdec2bcd
  .text.FUNCbcd2dec
-                0x00000c7a       0x16 build/default/production/librarias/function.o
-                0x00000c7a                FUNCbcd2dec
+                0x00000ce2       0x16 build/default/production/librarias/function.o
+                0x00000ce2                FUNCbcd2dec
  .text.FUNCresizestr
-                0x00000c90       0x5a build/default/production/librarias/function.o
-                0x00000c90                FUNCresizestr
+                0x00000cf8       0x5a build/default/production/librarias/function.o
+                0x00000cf8                FUNCresizestr
  .text.FUNCtrimmer
-                0x00000cea       0x82 build/default/production/librarias/function.o
-                0x00000cea                FUNCtrimmer
- .text.Power    0x00000d6c       0x36 build/default/production/librarias/function.o
-                0x00000d6c                Power
+                0x00000d52       0x82 build/default/production/librarias/function.o
+                0x00000d52                FUNCtrimmer
+ .text.Power    0x00000dd4       0x36 build/default/production/librarias/function.o
+                0x00000dd4                Power
  .text.StringLength
-                0x00000da2       0x1e build/default/production/librarias/function.o
-                0x00000da2                StringLength
+                0x00000e0a       0x1e build/default/production/librarias/function.o
+                0x00000e0a                StringLength
  .text.FUNCtrim
-                0x00000dc0       0x38 build/default/production/librarias/function.o
-                0x00000dc0                FUNCtrim
- .text.Reverse  0x00000df8       0x3c build/default/production/librarias/function.o
-                0x00000df8                Reverse
+                0x00000e28       0x38 build/default/production/librarias/function.o
+                0x00000e28                FUNCtrim
+ .text.Reverse  0x00000e60       0x3c build/default/production/librarias/function.o
+                0x00000e60                Reverse
  .text.FUNCi32toa
-                0x00000e34       0xbe build/default/production/librarias/function.o
-                0x00000e34                FUNCi32toa
+                0x00000e9c       0xbe build/default/production/librarias/function.o
+                0x00000e9c                FUNCi32toa
  .text.FUNCi16toa
-                0x00000ef2       0x78 build/default/production/librarias/function.o
-                0x00000ef2                FUNCi16toa
+                0x00000f5a       0x78 build/default/production/librarias/function.o
+                0x00000f5a                FUNCi16toa
  .text.FUNCui16toa
-                0x00000f6a       0x80 build/default/production/librarias/function.o
-                0x00000f6a                FUNCui16toa
+                0x00000fd2       0x80 build/default/production/librarias/function.o
+                0x00000fd2                FUNCui16toa
  .text.FUNCbcd2bin
-                0x00000fea       0x16 build/default/production/librarias/function.o
-                0x00000fea                FUNCbcd2bin
+                0x00001052       0x16 build/default/production/librarias/function.o
+                0x00001052                FUNCbcd2bin
  .text.FUNCbin2bcd
-                0x00001000       0x42 build/default/production/librarias/function.o
-                0x00001000                FUNCbin2bcd
+                0x00001068       0x42 build/default/production/librarias/function.o
+                0x00001068                FUNCbin2bcd
  .text.FUNCgcd1
-                0x00001042       0xa2 build/default/production/librarias/function.o
-                0x00001042                FUNCgcd1
+                0x000010aa       0xa2 build/default/production/librarias/function.o
+                0x000010aa                FUNCgcd1
  .text.FUNCpincheck
-                0x000010e4       0x10 build/default/production/librarias/function.o
-                0x000010e4                FUNCpincheck
+                0x0000114c       0x10 build/default/production/librarias/function.o
+                0x0000114c                FUNCpincheck
  .text.FUNCprint_binary
-                0x000010f4       0x2c build/default/production/librarias/function.o
-                0x000010f4                FUNCprint_binary
+                0x0000115c       0x2c build/default/production/librarias/function.o
+                0x0000115c                FUNCprint_binary
  .text.FUNCmayia
-                0x00001120       0x46 build/default/production/librarias/function.o
-                0x00001120                FUNCmayia
+                0x00001188       0x46 build/default/production/librarias/function.o
+                0x00001188                FUNCmayia
  .text.FUNCenable
-                0x00001166      0x14e build/default/production/librarias/function.o
-                0x00001166                FUNCenable
+                0x000011ce      0x14e build/default/production/librarias/function.o
+                0x000011ce                FUNCenable
  .text.libgcc.mul
-                0x000012b4       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
-                0x000012b4                __mulsi3
+                0x0000131c       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
+                0x0000131c                __mulsi3
  .text.libgcc.div
-                0x000012d4       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
-                0x000012d4                _div
-                0x000012d4                __divmodhi4
+                0x0000133c       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
+                0x0000133c                _div
+                0x0000133c                __divmodhi4
  .text.libgcc.div
-                0x000012fc       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
-                0x000012fc                __udivmodsi4
+                0x00001364       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
+                0x00001364                __udivmodsi4
  .text.libgcc.div
-                0x00001340       0x2e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodsi4.o)
-                0x00001340                __divmodsi4
+                0x000013a8       0x2e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodsi4.o)
+                0x000013a8                __divmodsi4
  .text.libgcc.div
-                0x0000136e       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_negsi2.o)
-                0x0000136e                __negsi2
+                0x000013d6       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_negsi2.o)
+                0x000013d6                __negsi2
  .text.libgcc.mul
-                0x0000137e       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
-                0x0000137e                __umulhisi3
+                0x000013e6       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+                0x000013e6                __umulhisi3
  .text.libgcc.mul
-                0x0000139c       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_muluhisi3.o)
-                0x0000139c                __muluhisi3
+                0x00001404       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_muluhisi3.o)
+                0x00001404                __muluhisi3
  .text.libgcc.div
-                0x000013b2       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
-                0x000013b2                __udivmodhi4
-                0x000013da                . = ALIGN (0x2)
+                0x0000141a       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
+                0x0000141a                __udivmodhi4
+                0x00001442                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000013da        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
-                0x000013da                _exit
-                0x000013da                exit
+ .fini9         0x00001442        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                0x00001442                _exit
+                0x00001442                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -855,11 +855,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000013da        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .fini0         0x00001442        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x000013de                _etext = .
+                0x00001446                _etext = .
 
-.data           0x00800100        0xc load address 0x000013de
+.data           0x00800100        0xc load address 0x00001446
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -931,8 +931,8 @@ END GROUP
  COMMON         0x008001cd       0x10 build/default/production/librarias/function.o
                 0x008001cd                FUNCstr
                 0x008001dd                PROVIDE (__bss_end, .)
-                0x000013de                __data_load_start = LOADADDR (.data)
-                0x000013ea                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001446                __data_load_start = LOADADDR (.data)
+                0x00001452                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008001dd        0x0
                 [!provide]                PROVIDE (__noinit_start, .)

@@ -41,11 +41,19 @@ Comment:
 /*
 ** procedure and function header
 */
-void PORTINIT();
+void PORTINIT(void);
 /*
  ** MAIN
  */
 int main(int argc, char** argv) {
+    /***Variables***/
+    char str[16];
+    /***DEFINE IO***/
+    uint8_t PPINB=PINB;
+    uint8_t LPINB=PPINB;
+    uint8_t PPINC=PINC;
+    uint8_t LPINC=PPINC;
+    /***FUNCTION***/
     PORTINIT();
 	/***INICIALIZE OBJECTS***/
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
@@ -54,16 +62,31 @@ int main(int argc, char** argv) {
     
 	while(TRUE){
 		lcd0.reboot();
+        /***SETUP IO***/
+        PPINB=PINB;
+        PPINC=PINC;
 		//TODO:: Please write your application code
 		lcd0.gotoxy(0,4);
 		lcd0.string_size("Boot up",7);
 		lcd0.gotoxy(1,2);
 		lcd0.string_size("Run",3);
-        PORTC=PINB;
+        
+        if(LPINB!=PPINB)
+            func.ui16toa(func.hl(LPINB,PPINB),str);
+        
+        lcd0.gotoxy(2,0);
+        lcd0.string_size(str,4);
+        
+        if(func.hl(LPINB,PPINB)==1)
+            PORTC+=1;
+        
+        if((func.hl(LPINB,PPINB)==2))
+            PORTC-=1;
         
         
-        
-        
+        //UPDATE IO
+        LPINB=PPINB;
+        LPINC=PPINC;
 	}
     return (EXIT_SUCCESS);
 }
