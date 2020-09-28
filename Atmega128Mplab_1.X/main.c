@@ -113,7 +113,7 @@ void PORTINIT()
 ISR(TIMER0_OVF_vect) // TIMER0_COMP_vect
 {
     if(!count)
-        PORTC=255;
+        PORTC=0;
     count+=1;
 }
 

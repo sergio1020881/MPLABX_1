@@ -185,7 +185,7 @@ testing phase
 ** variable
 */
 unsigned char i2c_output;
-struct twi{
+struct tw{
 	/***PROTOTYPES VTABLE***/
 	void (*start)(unsigned char mode);
 	void (*master_connect)(unsigned char addr, unsigned char rw);
@@ -193,7 +193,7 @@ struct twi{
 	unsigned char (*master_read)(unsigned char request);
 	void (*stop)(void);
 };
-typedef struct twi I2C;
+typedef struct tw I2C;
 /*
 ** procedure and function header
 */
