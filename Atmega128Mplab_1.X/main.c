@@ -83,6 +83,10 @@ int main(int argc, char** argv) {
         if((func.hl(LPINB,PPINB)==2))
             PORTC-=1;
         
+        if((func.hl(LPINB,PPINB)==4)){
+            lcd0.write(0x1F,0);// cursor or display shift
+            lcd0.BF();
+        }
         
         //UPDATE IO
         LPINB=PPINB;
