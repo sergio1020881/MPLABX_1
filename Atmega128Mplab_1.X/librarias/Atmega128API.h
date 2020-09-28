@@ -24,14 +24,14 @@ ANALOG API START
 /*
 ** variable
 */
-struct ANALOG{
+struct nlg{
 	/***Parameters***/
 	uint8_t VREFF;
 	uint8_t DIVISION_FACTOR;
 	//prototype pointers
 	int (*read)(int selection);
 };
-typedef struct ANALOG ANALOG;
+typedef struct nlg ANALOG;
 /*
 ** procedure and function header
 */
@@ -48,12 +48,12 @@ INTERRUPT API START
 /*
 ** variable
 */
-struct INTERRUPT{
+struct ntrrpt{
 	void (*set)(uint8_t channel, uint8_t sense);
 	void (*off)(uint8_t channel);
 	uint8_t (*reset_status)(void);
 };
-typedef struct INTERRUPT INTERRUPT;
+typedef struct ntrrpt INTERRUPT;
 /*
 ** procedure and function header
 */
@@ -74,13 +74,13 @@ SPI API START
 /*
 ** variable
 */
-struct SPI{
+struct sp{
 	/***/
 	void (*transfer_sync) (uint8_t * dataout, uint8_t * datain, uint8_t len);
 	void (*transmit_sync) (uint8_t * dataout, uint8_t len);
 	uint8_t (*fast_shift) (uint8_t data);
 };
-typedef struct SPI SPI;
+typedef struct sp SPI;
 /*
 ** procedure and function header
 */
@@ -97,7 +97,7 @@ TIMER API START
 /*
 ** variable
 */
-struct TIMER_COUNTER0{
+struct tmr_cntr0{
 	// prototype pointers
 	void (*compoutmode)(unsigned char compoutmode);
 	void (*compoutmodeA)(unsigned char compoutmode);
@@ -108,9 +108,9 @@ struct TIMER_COUNTER0{
 	void (*start)(unsigned int prescaler);
 	void (*stop)(void);
 };
-typedef struct TIMER_COUNTER0 TIMER_COUNTER0;
+typedef struct tmr_cntr0 TIMER_COUNTER0;
 /**/
-struct TIMER_COUNTER1{
+struct tmr_cntr1{
 	// prototype pointers
 	void (*compoutmodeA)(unsigned char compoutmode);
 	void (*compoutmodeB)(unsigned char compoutmode);
@@ -121,9 +121,9 @@ struct TIMER_COUNTER1{
 	void (*start)(unsigned int prescaler);
 	void (*stop)(void);
 };
-typedef struct TIMER_COUNTER1 TIMER_COUNTER1;
+typedef struct tmr_cntr1 TIMER_COUNTER1;
 /**/
-struct TIMER_COUNTER2{
+struct tmr_cntr2{
 	// prototype pointers
 	void (*compoutmode)(unsigned char compoutmode);
 	void (*compoutmodeA)(unsigned char compoutmode);
@@ -134,9 +134,9 @@ struct TIMER_COUNTER2{
 	void (*start)(unsigned int prescaler);
 	void (*stop)(void);
 };
-typedef struct TIMER_COUNTER2 TIMER_COUNTER2;
+typedef struct tmr_cntr2 TIMER_COUNTER2;
 /**/
-struct TIMER_COUNTER3{
+struct tmr_cntr3{
 	// prototype pointers
 	void (*compoutmodeA)(unsigned char compoutmode);
 	void (*compoutmodeB)(unsigned char compoutmode);
@@ -147,7 +147,7 @@ struct TIMER_COUNTER3{
 	void (*start)(unsigned int prescaler);
 	void (*stop)(void);
 };
-typedef struct TIMER_COUNTER3 TIMER_COUNTER3;
+typedef struct tmr_cntr3 TIMER_COUNTER3;
 /*
 ** procedure and function header
 */
@@ -185,7 +185,7 @@ testing phase
 ** variable
 */
 unsigned char i2c_output;
-struct I2C{
+struct twi{
 	/***PROTOTYPES VTABLE***/
 	void (*start)(unsigned char mode);
 	void (*master_connect)(unsigned char addr, unsigned char rw);
@@ -193,7 +193,7 @@ struct I2C{
 	unsigned char (*master_read)(unsigned char request);
 	void (*stop)(void);
 };
-typedef struct I2C I2C;
+typedef struct twi I2C;
 /*
 ** procedure and function header
 */
@@ -245,7 +245,7 @@ UART API START
 /*
 ** variable
 */
-struct UART{
+struct rt{
 	/***Parameters***/
 	unsigned int ubrr;
 	unsigned int FDbits;
@@ -259,8 +259,8 @@ struct UART{
 	int (*available)(void);
 	void (*flush)(void);
 };
-typedef struct UART UART;
-struct UART1{
+typedef struct rt UART;
+struct rt1{
 	/***Parameters***/
 	unsigned int ubrr;
 	unsigned int FDbits;
@@ -274,7 +274,7 @@ struct UART1{
 	int (*available)(void);
 	void (*flush)(void);
 };
-typedef struct UART1 UART1;
+typedef struct rt1 UART1;
 /*
 ** procedure and function header
 */

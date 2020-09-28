@@ -38,6 +38,7 @@ Comment:
 /*
 ** variable
 */
+uint8_t count;
 /*
 ** procedure and function header
 */
@@ -58,7 +59,8 @@ int main(int argc, char** argv) {
 	/***INICIALIZE OBJECTS***/
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
     FUNC func = FUNCenable();
-    
+    TIMER_COUNTER0 tc_0 = TIMER_COUNTER0enable(0,1);
+    tc_0.start(1024);
     
 	while(TRUE){
 		lcd0.reboot();
@@ -108,7 +110,12 @@ void PORTINIT()
 /*
 ** interrupt
 */
-
+ISR(TIMER0_OVF_vect) // TIMER0_COMP_vect
+{
+    if(!count)
+        PORTC=255;
+    count+=1;
+}
 
 /*************************************************************************
 *************************************************************************/
