@@ -1,6 +1,9 @@
 /************************************************************************
 ATMEGA128 API START
-Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
+Author: 
+	Sergio Santos 
+	<sergio.salazar.santos@gmail.com>
+	28092020
 ************************************************************************/
 /***preamble inic***/
 #ifndef _ATMEGA128API_H_

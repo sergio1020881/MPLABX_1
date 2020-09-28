@@ -7,7 +7,10 @@ ATMEGA128 API START
 		4-TIMER
 		5-TWI (still in progress)
 		6-UART
-Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
+Author: 
+	Sergio Santos 
+	<sergio.salazar.santos@gmail.com>
+	28092020
 *************************************************************************/
 /***preamble inic***/
 #ifndef F_CPU
