@@ -155,6 +155,7 @@ TIMER_COUNTER0 TIMER_COUNTER0enable(unsigned char wavegenmode, unsigned char int
 TIMER_COUNTER1 TIMER_COUNTER1enable(unsigned char wavegenmode, unsigned char interrupt);
 TIMER_COUNTER2 TIMER_COUNTER2enable(unsigned char wavegenmode, unsigned char interrupt);
 TIMER_COUNTER3 TIMER_COUNTER3enable(unsigned char wavegenmode, unsigned char interrupt);
+/***EOF***/
 /*************************************************************************
 TIMER API END
 *************************************************************************/
@@ -197,6 +198,7 @@ typedef struct I2C I2C;
 ** procedure and function header
 */
 I2C I2Cenable(unsigned char device_id, unsigned char prescaler);
+/***EOF***/
 /************************************************************************
 I2C API END
 testing phase
@@ -226,10 +228,9 @@ UART API START
 	#define UART_TX_BUFFER_SIZE 32
 #endif
 /* test if the size of the circular buffers fits into SRAM */
-//#if ( (UART_RX_BUFFER_SIZE+UART_TX_BUFFER_SIZE) >= (RAMEND-0x060) )
-//(RAMEND-0x60 )
-//	#error "size of UART_RX_BUFFER_SIZE + UART_TX_BUFFER_SIZE larger than size of SRAM"
-//#endif
+#if ( (UART_RX_BUFFER_SIZE+UART_TX_BUFFER_SIZE) >= (RAMEND-0x60 ) )
+	#error "size of UART_RX_BUFFER_SIZE + UART_TX_BUFFER_SIZE larger than size of SRAM"
+#endif
 /* 
 ** high byte error return code of uart_getc()
 */
@@ -372,6 +373,7 @@ extern void uart1_puts_p(const char *s );
 //extern int uart1_available(void);
 /** @brief   Flush bytes waiting in receive buffer */
 //extern void uart1_flush(void);
+/***EOF***/
 /************************************************************************
 UART API END
 ************************************************************************/

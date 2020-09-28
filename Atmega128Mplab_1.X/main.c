@@ -1,17 +1,19 @@
 /************************************************************************
-Title: ATMEGA 128
-Author: Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
-File: main.c 2020/09/26 14:00:00
-Software: MPLAB X IDE v5.40
+Title: 
+    ATMEGA 128
+Author: 
+    Sergio Santos 
+    sergio.salazar.santos@gmail.com>
+File: 
+    main.c 2020/09/26 14:00:00
+Software: 
+    MPLAB X IDE v5.40
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA: lcd display 2x16 or 4x20
-	-16Mhz
-LICENSE:
-	Copyright (C) 2014
-	This program is free software; you can redistribute it and/or modify
-	it.
-COMMENT:
-	stable
+License:
+    GNU Public License
+Comment:
+	28092020
 ************************************************************************/
 /***preamble inic***/
 #define F_CPU 16000000UL
@@ -50,9 +52,14 @@ int main(int argc, char** argv) {
 		lcd0.reboot();
 		//TODO:: Please write your application code
 		lcd0.gotoxy(0,4);
-		lcd0.string_size("Ola Sergio",10);
+		lcd0.string_size("Boot up",7);
 		lcd0.gotoxy(1,2);
-		lcd0.string_size("Bom trabalho",12);
+		lcd0.string_size("Run",3);
+        //PORTC+=1;
+        
+        
+        
+        
 	}
     return (EXIT_SUCCESS);
 }
@@ -61,8 +68,10 @@ int main(int argc, char** argv) {
 */
 void PORTINIT()
 {
-	DDRG|=0B00000100;
-	PORTG|=0B00000011;
+	DDRB=0B00000000;
+	PORTB=0B11111111;
+    DDRC=0B11111111;
+    PORTC=0B00000000;
 	SREG|=(1<<GI);
 }
 /*
