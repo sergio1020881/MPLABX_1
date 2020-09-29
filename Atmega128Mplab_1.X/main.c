@@ -52,7 +52,7 @@ void PORTINIT(void);
  */
 int main(int argc, char** argv) {
     /***Variables***/
-    char str[16];
+    char str[16]="0";
     /***DEFINE IO***/
     uint8_t PPINB=PINB;
     uint8_t LPINB=PPINB;
@@ -96,11 +96,15 @@ int main(int argc, char** argv) {
             lcd0.BF();
         }
         
-        //if(keypad.getkey()==KEYPADENTERKEY)
-            //keypad.flush();
         
         lcd0.gotoxy(3,0);
-        lcd0.putch(keypad.get().character);
+        lcd0.string_size(keypad.get().string,20);
+        
+        
+        if(keypad.get().character=='C'){
+			keypad.flush();
+			lcd0.clear();
+		}
         
         //UPDATE IO
         LPINB=PPINB;
