@@ -10,7 +10,7 @@ License:
 	GNU General Public License        
 Comment:
 	Tested Atemga128 16Mhz and Atmega328 8Mhz
-	reviewed 27/09/2020                    
+	reviewed 29/09/2020                    
 ************************************************************************/
 #ifndef F_CPU
 /***Mandatory to use util/delay.h***/

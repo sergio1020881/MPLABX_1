@@ -10,6 +10,9 @@ Software:
     MPLAB X IDE v5.40
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA: lcd display 2x16 or 4x20
+    -PORTC: Relay Board
+    -PORTE: Keyboard
+    -PORTB: Buttons
 License:
     GNU Public License
 Comment:
@@ -29,6 +32,7 @@ Comment:
 #include "librarias/Atmega128API.h"
 #include "librarias/lcd.h"
 #include "librarias/function.h"
+#include "librarias/keypad.h"
 /*
 ** constant and macro
 */
@@ -60,6 +64,8 @@ int main(int argc, char** argv) {
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
     FUNC func = FUNCenable();
     TIMER_COUNTER0 tc_0 = TIMER_COUNTER0enable(0,1);
+    KEYPAD keypad = KEYPADenable(&DDRE,&PINE,&PORTE);
+    
     tc_0.start(1024);
     
 	while(TRUE){
@@ -79,16 +85,22 @@ int main(int argc, char** argv) {
         lcd0.gotoxy(2,0);
         lcd0.string_size(str,4);
         
-        if(func.hl(LPINB,PPINB)==1)
+        if(func.hl(LPINB,PPINB) & 1)
             PORTC+=1;
         
-        if((func.hl(LPINB,PPINB)==2))
+        if((func.hl(LPINB,PPINB) & 2))
             PORTC-=1;
         
-        if((func.hl(LPINB,PPINB)==4)){
+        if((func.hl(LPINB,PPINB) & 4)){
             lcd0.write(0x1F,0);// cursor or display shift
             lcd0.BF();
         }
+        
+        //if(keypad.getkey()==KEYPADENTERKEY)
+            //keypad.flush();
+        
+        lcd0.gotoxy(3,0);
+        lcd0.putch(keypad.get().character);
         
         //UPDATE IO
         LPINB=PPINB;

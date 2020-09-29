@@ -7,6 +7,7 @@
       <itemPath>librarias/Atmega128API.h</itemPath>
       <itemPath>librarias/lcd.h</itemPath>
       <itemPath>librarias/function.h</itemPath>
+      <itemPath>librarias/keypad.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +19,7 @@
       <itemPath>librarias/Atmega128API.c</itemPath>
       <itemPath>librarias/lcd.c</itemPath>
       <itemPath>librarias/function.c</itemPath>
+      <itemPath>librarias/keypad.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

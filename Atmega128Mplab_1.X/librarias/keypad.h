@@ -3,7 +3,7 @@ KEYPAD API START
 Author: 
 	Sergio Santos 
 	<sergio.salazar.santos@gmail.com>
-	28092020
+	29092020
 ************************************************************************/
 /***preamble inic***/
 #ifndef _KEYPAD_H_
