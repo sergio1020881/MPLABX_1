@@ -23,7 +23,7 @@ COMMENT:
 #ifndef _LFSM_H_
 	#define _LFSM_H_
 /******/
-#include "eeprom.h"
+#include "../EEPROM/eeprom.h"
 /*
 ** constant and macro
 */

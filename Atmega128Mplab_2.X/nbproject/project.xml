@@ -17,6 +17,8 @@
                 <sourceRootElem>Librarias/FUNCTION</sourceRootElem>
                 <sourceRootElem>Librarias/KEYPAD</sourceRootElem>
                 <sourceRootElem>Librarias/LCD</sourceRootElem>
+                <sourceRootElem>Librarias/LFSM</sourceRootElem>
+                <sourceRootElem>Librarias/EEPROM</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

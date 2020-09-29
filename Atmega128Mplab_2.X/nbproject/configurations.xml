@@ -8,6 +8,8 @@
       <itemPath>Librarias/FUNCTION/function.h</itemPath>
       <itemPath>Librarias/KEYPAD/keypad.h</itemPath>
       <itemPath>Librarias/LCD/lcd.h</itemPath>
+      <itemPath>Librarias/LFSM/lfsm.h</itemPath>
+      <itemPath>Librarias/EEPROM/eeprom.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +22,8 @@
       <itemPath>Librarias/FUNCTION/function.c</itemPath>
       <itemPath>Librarias/KEYPAD/keypad.c</itemPath>
       <itemPath>Librarias/LCD/lcd.c</itemPath>
+      <itemPath>Librarias/LFSM/lfsm.c</itemPath>
+      <itemPath>Librarias/EEPROM/eeprom.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -33,6 +37,8 @@
     <Elem>Librarias/FUNCTION</Elem>
     <Elem>Librarias/KEYPAD</Elem>
     <Elem>Librarias/LCD</Elem>
+    <Elem>Librarias/LFSM</Elem>
+    <Elem>Librarias/EEPROM</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

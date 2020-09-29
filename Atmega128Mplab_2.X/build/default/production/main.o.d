@@ -16,8 +16,11 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
+ Librarias/EEPROM/eeprom.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\eeprom.h \
  Librarias/ATMEGA128API/Atmega128API.h Librarias/LCD/lcd.h \
- Librarias/FUNCTION/function.h Librarias/KEYPAD/keypad.h
+ Librarias/FUNCTION/function.h Librarias/KEYPAD/keypad.h \
+ Librarias/LFSM/lfsm.h Librarias/LFSM/../EEPROM/eeprom.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
 
@@ -53,6 +56,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
+Librarias/EEPROM/eeprom.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\eeprom.h:
+
 Librarias/ATMEGA128API/Atmega128API.h:
 
 Librarias/LCD/lcd.h:
@@ -60,3 +67,7 @@ Librarias/LCD/lcd.h:
 Librarias/FUNCTION/function.h:
 
 Librarias/KEYPAD/keypad.h:
+
+Librarias/LFSM/lfsm.h:
+
+Librarias/LFSM/../EEPROM/eeprom.h:
