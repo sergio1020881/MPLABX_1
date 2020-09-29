@@ -52,7 +52,7 @@ void PORTINIT(void);
  */
 int main(int argc, char** argv) {
     /***Variables***/
-    char str[16]="0";
+    char* str=NULL;
     /***DEFINE IO***/
     uint8_t PPINB=PINB;//INIC value
     uint8_t LPINB;
@@ -85,7 +85,7 @@ int main(int argc, char** argv) {
 		lcd0.string_size("Run",3);
         
         if(LPINB!=PPINB)
-            func.ui16toa(func.hl(LPINB,PPINB),str);
+            str=func.ui16toa(func.hl(LPINB,PPINB));
         
         lcd0.gotoxy(2,0);
         lcd0.string_size(str,4);

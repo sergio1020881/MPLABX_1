@@ -4,12 +4,11 @@ Author:
     Sergio Santos
     <sergio.salazar.santos@gmail.com>
 File:
-    $Id: function.h,v 0.1 2018/08/18 Exp $
+    $Id: function.h,v 0.1 29/09/2020 Exp $
 License:
     GNU General Public License 
 Comment:
 	Very Stable
-    29092020
 ************************************************************************/
 #ifndef _FUNCTION_H_
 	#define _FUNCTION_H_
@@ -41,9 +40,9 @@ struct function{
 	void (*copy)(char to[], char from[]);
 	void (*squeeze)(char s[], int c);
 	void (*shellsort)(int v[], int n);
-	void (*i16toa)(int16_t n, char s[]);
-	void (*ui16toa)(uint16_t n, char s[]);
-	void (*i32toa)(int32_t n, char s[]);
+	char* (*i16toa)(int16_t n);
+	char* (*ui16toa)(uint16_t n);
+	char* (*i32toa)(int32_t n);
 	int (*trim)(char s[]);
 	int (*pmax)(int a1, int a2);
 	int (*gcd)(int u, int v);

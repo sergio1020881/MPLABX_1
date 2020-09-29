@@ -5,12 +5,11 @@ Author:
     Sergio Santos
     <sergio.salazar.santos@gmail.com>
 File:
-    $Id: function.c,v 0.1 2018/08/18 Exp $ 
+    $Id: function.c,v 0.1 29/09/2020 Exp $ 
 License:  GNU General Public License
 Comment:
     Always try to make general purpose bullet proof functions !!
     Very Stable
-    29092020
 *************************************************************************/
 /*
 ** library
@@ -31,12 +30,12 @@ Comment:
 ** constant and macro
 */
 #ifndef GLOBAL_INTERRUPT_ENABLE
- #define GLOBAL_INTERRUPT_ENABLE 7
+	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 /*
 ** variable
 */
-char FUNCstr[16];
+char FUNCstr[20];
 /*
 ** procedure and function header
 */
@@ -57,9 +56,9 @@ void FUNCswap(long *px, long *py);
 void FUNCcopy(char to[], char from[]);
 void FUNCsqueeze(char s[], int c);
 void FUNCshellsort(int v[], int n);
-void FUNCi16toa(int16_t n, char s[]);
-void FUNCui16toa(uint16_t n, char s[]);
-void FUNCi32toa(int32_t n, char s[]);
+char* FUNCi16toa(int16_t n);
+char* FUNCui16toa(uint16_t n);
+char* FUNCi32toa(int32_t n);
 int FUNCtrim(char s[]);
 int FUNCpmax(int a1, int a2);
 int FUNCgcd (int u, int v);
@@ -86,7 +85,7 @@ char* FUNCputstr(char* str);
 int FUNCgetnum(char* x);
 unsigned int FUNCgetnumv2(char* x);
 int FUNCreadint(int nmin, int nmax);
-*/
+***/
 // uint8_t TRANupdate(struct TRAN *tr, uint8_t idata);
 /*
 ** procedure and function
@@ -262,7 +261,7 @@ void FUNCshellsort(int v[], int n)
 			}
 }
 // i32toa: convert n to characters in s
-void FUNCi32toa(int32_t n, char s[])
+char* FUNCi32toa(int32_t n)
 {
 	uint8_t i;
 	int32_t sign;
@@ -270,15 +269,16 @@ void FUNCi32toa(int32_t n, char s[])
 	n = -n; // make n positive
 	i = 0;
 	do { // generate digits in reverse order
-		s[i++] = n % 10 + '0'; // get next digit
+		FUNCstr[i++] = n % 10 + '0'; // get next digit
 	}while ((n /= 10) > 0); // delete it
 	if (sign < 0)
-	s[i++] = '-';
-	s[i] = '\0';
-	Reverse(s);
+	FUNCstr[i++] = '-';
+	FUNCstr[i] = '\0';
+	Reverse(FUNCstr);
+	return FUNCstr;
 }
 // i16toa: convert n to characters in s
-void FUNCi16toa(int16_t n, char s[])
+char* FUNCi16toa(int16_t n)
 {
 	uint8_t i;
 	int16_t sign;
@@ -286,23 +286,25 @@ void FUNCi16toa(int16_t n, char s[])
 		n = -n; // make n positive
 	i = 0;
 	do { // generate digits in reverse order
-		s[i++] = n % 10 + '0'; // get next digit
+		FUNCstr[i++] = n % 10 + '0'; // get next digit
 	}while ((n /= 10) > 0); // delete it
 	if (sign < 0)
-		s[i++] = '-';
-	s[i] = '\0';
-	Reverse(s);
+		FUNCstr[i++] = '-';
+	FUNCstr[i] = '\0';
+	Reverse(FUNCstr);
+	return FUNCstr;
 }
 // ui16toa: convert n to characters in s
-void FUNCui16toa(uint16_t n, char s[])
+char* FUNCui16toa(uint16_t n)
 {
 	uint8_t i;
 	i = 0;
 	do { // generate digits in reverse order
-		s[i++] = n % 10 + '0'; // get next digit
+		FUNCstr[i++] = n % 10 + '0'; // get next digit
 	}while ((n /= 10) > 0); // delete it
-	s[i] = '\0';
-	Reverse(s);
+	FUNCstr[i] = '\0';
+	Reverse(FUNCstr);
+	return FUNCstr;
 }
 // trim: remove trailing blanks, tabs, newlines
 int FUNCtrim(char s[])
@@ -696,7 +698,7 @@ int FUNCreadint(int nmin, int nmax)
 	}
 		return num;
 }
-*/
+***/
 /*
 ** interrupt
 */
