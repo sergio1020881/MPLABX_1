@@ -448,7 +448,7 @@ void LCD1_hspace(uint8_t n)
 void LCD1_clear(void)
 {
 	LCD1_write(0x01,INST);
-	LCD1_BF();
+	_delay_ms(1.53);
 }
 void LCD1_gotoxy(unsigned int y, unsigned int x)
 {
