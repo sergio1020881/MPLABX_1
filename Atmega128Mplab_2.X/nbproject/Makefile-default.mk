@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Librarias/ATMEGA128API/Atmega128API.c Librarias/FUNCTION/function.c Librarias/KEYPAD/keypad.c Librarias/LCD/lcd.c main.c Librarias/LFSM/lfsm.c Librarias/EEPROM/eeprom.c
+SOURCEFILES_QUOTED_IF_SPACED=Librarias/ATMEGA128API/Atmega128API.c Librarias/FUNCTION/function.c Librarias/KEYPAD/keypad.c Librarias/LCD/lcd.c Librarias/LFSM/lfsm.c Librarias/EEPROM/eeprom.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o ${OBJECTDIR}/Librarias/FUNCTION/function.o ${OBJECTDIR}/Librarias/KEYPAD/keypad.o ${OBJECTDIR}/Librarias/LCD/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Librarias/LFSM/lfsm.o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o.d ${OBJECTDIR}/Librarias/FUNCTION/function.o.d ${OBJECTDIR}/Librarias/KEYPAD/keypad.o.d ${OBJECTDIR}/Librarias/LCD/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Librarias/LFSM/lfsm.o.d ${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o ${OBJECTDIR}/Librarias/FUNCTION/function.o ${OBJECTDIR}/Librarias/KEYPAD/keypad.o ${OBJECTDIR}/Librarias/LCD/lcd.o ${OBJECTDIR}/Librarias/LFSM/lfsm.o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o.d ${OBJECTDIR}/Librarias/FUNCTION/function.o.d ${OBJECTDIR}/Librarias/KEYPAD/keypad.o.d ${OBJECTDIR}/Librarias/LCD/lcd.o.d ${OBJECTDIR}/Librarias/LFSM/lfsm.o.d ${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o ${OBJECTDIR}/Librarias/FUNCTION/function.o ${OBJECTDIR}/Librarias/KEYPAD/keypad.o ${OBJECTDIR}/Librarias/LCD/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Librarias/LFSM/lfsm.o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o
+OBJECTFILES=${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o ${OBJECTDIR}/Librarias/FUNCTION/function.o ${OBJECTDIR}/Librarias/KEYPAD/keypad.o ${OBJECTDIR}/Librarias/LCD/lcd.o ${OBJECTDIR}/Librarias/LFSM/lfsm.o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=Librarias/ATMEGA128API/Atmega128API.c Librarias/FUNCTION/function.c Librarias/KEYPAD/keypad.c Librarias/LCD/lcd.c main.c Librarias/LFSM/lfsm.c Librarias/EEPROM/eeprom.c
+SOURCEFILES=Librarias/ATMEGA128API/Atmega128API.c Librarias/FUNCTION/function.c Librarias/KEYPAD/keypad.c Librarias/LCD/lcd.c Librarias/LFSM/lfsm.c Librarias/EEPROM/eeprom.c main.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -134,12 +134,6 @@ ${OBJECTDIR}/Librarias/LCD/lcd.o: Librarias/LCD/lcd.c  nbproject/Makefile-${CND_
 	@${RM} ${OBJECTDIR}/Librarias/LCD/lcd.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/Librarias/LCD/lcd.o.d" -MT "${OBJECTDIR}/Librarias/LCD/lcd.o.d" -MT ${OBJECTDIR}/Librarias/LCD/lcd.o  -o ${OBJECTDIR}/Librarias/LCD/lcd.o Librarias/LCD/lcd.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/Librarias/LFSM/lfsm.o: Librarias/LFSM/lfsm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Librarias/LFSM" 
 	@${RM} ${OBJECTDIR}/Librarias/LFSM/lfsm.o.d 
@@ -151,6 +145,12 @@ ${OBJECTDIR}/Librarias/EEPROM/eeprom.o: Librarias/EEPROM/eeprom.c  nbproject/Mak
 	@${RM} ${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d 
 	@${RM} ${OBJECTDIR}/Librarias/EEPROM/eeprom.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d" -MT "${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d" -MT ${OBJECTDIR}/Librarias/EEPROM/eeprom.o  -o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o Librarias/EEPROM/eeprom.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/Librarias/ATMEGA128API/Atmega128API.o: Librarias/ATMEGA128API/Atmega128API.c  nbproject/Makefile-${CND_CONF}.mk
@@ -177,12 +177,6 @@ ${OBJECTDIR}/Librarias/LCD/lcd.o: Librarias/LCD/lcd.c  nbproject/Makefile-${CND_
 	@${RM} ${OBJECTDIR}/Librarias/LCD/lcd.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/Librarias/LCD/lcd.o.d" -MT "${OBJECTDIR}/Librarias/LCD/lcd.o.d" -MT ${OBJECTDIR}/Librarias/LCD/lcd.o  -o ${OBJECTDIR}/Librarias/LCD/lcd.o Librarias/LCD/lcd.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/Librarias/LFSM/lfsm.o: Librarias/LFSM/lfsm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Librarias/LFSM" 
 	@${RM} ${OBJECTDIR}/Librarias/LFSM/lfsm.o.d 
@@ -194,6 +188,12 @@ ${OBJECTDIR}/Librarias/EEPROM/eeprom.o: Librarias/EEPROM/eeprom.c  nbproject/Mak
 	@${RM} ${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d 
 	@${RM} ${OBJECTDIR}/Librarias/EEPROM/eeprom.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d" -MT "${OBJECTDIR}/Librarias/EEPROM/eeprom.o.d" -MT ${OBJECTDIR}/Librarias/EEPROM/eeprom.o  -o ${OBJECTDIR}/Librarias/EEPROM/eeprom.o Librarias/EEPROM/eeprom.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega128 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 

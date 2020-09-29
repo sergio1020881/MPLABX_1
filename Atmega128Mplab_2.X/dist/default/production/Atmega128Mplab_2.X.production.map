@@ -279,9 +279,6 @@ Discarded input sections
                 0x00000000       0x1e build/default/production/Librarias/LCD/lcd.o
  .text.LCD_ticks
                 0x00000000       0x14 build/default/production/Librarias/LCD/lcd.o
- .text          0x00000000        0x0 build/default/production/main.o
- .data          0x00000000        0x0 build/default/production/main.o
- .bss           0x00000000        0x0 build/default/production/main.o
  .text          0x00000000        0x0 build/default/production/Librarias/LFSM/lfsm.o
  .data          0x00000000        0x0 build/default/production/Librarias/LFSM/lfsm.o
  .bss           0x00000000        0x0 build/default/production/Librarias/LFSM/lfsm.o
@@ -293,6 +290,9 @@ Discarded input sections
  .text          0x00000000        0x0 build/default/production/Librarias/EEPROM/eeprom.o
  .data          0x00000000        0x0 build/default/production/Librarias/EEPROM/eeprom.o
  .bss           0x00000000        0x0 build/default/production/Librarias/EEPROM/eeprom.o
+ .text          0x00000000        0x0 build/default/production/main.o
+ .data          0x00000000        0x0 build/default/production/main.o
+ .bss           0x00000000        0x0 build/default/production/main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
@@ -522,9 +522,9 @@ LOAD build/default/production/Librarias/ATMEGA128API/Atmega128API.o
 LOAD build/default/production/Librarias/FUNCTION/function.o
 LOAD build/default/production/Librarias/KEYPAD/keypad.o
 LOAD build/default/production/Librarias/LCD/lcd.o
-LOAD build/default/production/main.o
 LOAD build/default/production/Librarias/LFSM/lfsm.o
 LOAD build/default/production/Librarias/EEPROM/eeprom.o
+LOAD build/default/production/main.o
                 0x00000001                __MPLAB_BUILD = 0x1
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
@@ -900,47 +900,47 @@ END GROUP
  .text.LCD0_reboot
                 0x000015dc       0x24 build/default/production/Librarias/LCD/lcd.o
                 0x000015dc                LCD0_reboot
- .text.PORTINIT
-                0x00001600        0xc build/default/production/main.o
-                0x00001600                PORTINIT
- .text.main     0x0000160c      0x79a build/default/production/main.o
-                0x0000160c                main
  .text.LFSMquant
-                0x00001da6       0x68 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001da6                LFSMquant
+                0x00001600       0x68 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001600                LFSMquant
  .text.LFSMdeleteall
-                0x00001e0e       0xa0 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001e0e                LFSMdeleteall
+                0x00001668       0xa0 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001668                LFSMdeleteall
  .text.LFSMgetoutput
-                0x00001eae        0x6 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001eae                LFSMgetoutput
+                0x00001708        0x6 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001708                LFSMgetoutput
  .text.LFSMgetstatus
-                0x00001eb4        0x6 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001eb4                LFSMgetstatus
+                0x0000170e        0x6 build/default/production/Librarias/LFSM/lfsm.o
+                0x0000170e                LFSMgetstatus
  .text.LFSMsetoutput
-                0x00001eba        0x8 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001eba                LFSMsetoutput
+                0x00001714        0x8 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001714                LFSMsetoutput
  .text.LFSMgetpage
-                0x00001ec2        0x6 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001ec2                LFSMgetpage
+                0x0000171c        0x6 build/default/production/Librarias/LFSM/lfsm.o
+                0x0000171c                LFSMgetpage
  .text.LFSMsetpage
-                0x00001ec8        0x6 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001ec8                LFSMsetpage
+                0x00001722        0x6 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001722                LFSMsetpage
  .text.LFSMread
-                0x00001ece      0x280 build/default/production/Librarias/LFSM/lfsm.o
-                0x00001ece                LFSMread
+                0x00001728      0x280 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001728                LFSMread
  .text.LFSMremove
-                0x0000214e      0x25e build/default/production/Librarias/LFSM/lfsm.o
-                0x0000214e                LFSMremove
+                0x000019a8      0x25e build/default/production/Librarias/LFSM/lfsm.o
+                0x000019a8                LFSMremove
  .text.LFSMlearn
-                0x000023ac      0x186 build/default/production/Librarias/LFSM/lfsm.o
-                0x000023ac                LFSMlearn
+                0x00001c06      0x186 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001c06                LFSMlearn
  .text.LFSMenable
-                0x00002532       0x66 build/default/production/Librarias/LFSM/lfsm.o
-                0x00002532                LFSMenable
+                0x00001d8c       0x66 build/default/production/Librarias/LFSM/lfsm.o
+                0x00001d8c                LFSMenable
  .text.EEPROMenable
-                0x00002598       0x66 build/default/production/Librarias/EEPROM/eeprom.o
-                0x00002598                EEPROMenable
+                0x00001df2       0x66 build/default/production/Librarias/EEPROM/eeprom.o
+                0x00001df2                EEPROMenable
+ .text.PORTINIT
+                0x00001e58        0xc build/default/production/main.o
+                0x00001e58                PORTINIT
+ .text.main     0x00001e64      0x79a build/default/production/main.o
+                0x00001e64                main
  .text.libgcc.mul
                 0x000025fe       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_mulsi3.o)
                 0x000025fe                __mulsi3
@@ -1176,9 +1176,9 @@ END GROUP
  .comment       0x00000030       0x31 build/default/production/Librarias/FUNCTION/function.o
  .comment       0x00000030       0x31 build/default/production/Librarias/KEYPAD/keypad.o
  .comment       0x00000030       0x31 build/default/production/Librarias/LCD/lcd.o
- .comment       0x00000030       0x31 build/default/production/main.o
  .comment       0x00000030       0x31 build/default/production/Librarias/LFSM/lfsm.o
  .comment       0x00000030       0x31 build/default/production/Librarias/EEPROM/eeprom.o
+ .comment       0x00000030       0x31 build/default/production/main.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c

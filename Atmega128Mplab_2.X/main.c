@@ -53,7 +53,7 @@ int main(void)
 		n=PINB;
 		/******/
 		if(keypadinput.character){
-			lcd.gotoxy(0,10);
+			lcd.gotoxy(0,12);
 			lcd.putch(keypadinput.character);
 		}
 		lcd.gotoxy(0,16);
