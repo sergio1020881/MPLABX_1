@@ -103,7 +103,6 @@ int main(int argc, char** argv) {
         
         if(keypad.get().character=='C'){
 			keypad.flush();
-			lcd0.clear();
 		}
         
         //UPDATE IO
