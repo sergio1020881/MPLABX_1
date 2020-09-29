@@ -217,10 +217,10 @@ Discarded input sections
                 0x00000000       0x66 build/default/production/librarias/lcd.o
  .text.LCD1_hspace
                 0x00000000       0x1e build/default/production/librarias/lcd.o
- .text.LCD1_clear
-                0x00000000       0x10 build/default/production/librarias/lcd.o
  .text.LCD1_gotoxy
                 0x00000000       0x5e build/default/production/librarias/lcd.o
+ .text.LCD1_clear
+                0x00000000       0x18 build/default/production/librarias/lcd.o
  .text.LCD0_strobe
                 0x00000000       0x1e build/default/production/librarias/lcd.o
  .text.LCD1_inic

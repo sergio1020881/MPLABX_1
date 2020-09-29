@@ -10,9 +10,10 @@ License:
 	GNU General Public License        
 Comment:
 	Tested Atemga128 16Mhz and Atmega328 8Mhz
-	reviewed 27/09/2020                    
+	reviewed 29/09/2020                    
 ************************************************************************/
 #ifndef F_CPU
+/***Mandatory to use util/delay.h***/
 	#define F_CPU 16000000UL
 #endif
 /*
@@ -241,7 +242,7 @@ void LCD0_hspace(uint8_t n)
 void LCD0_clear(void)
 {
 	LCD0_write(0x01,INST);
-	LCD0_BF();
+    _delay_ms(1.53);
 }
 void LCD0_gotoxy(unsigned int y, unsigned int x)
 {
@@ -447,7 +448,7 @@ void LCD1_hspace(uint8_t n)
 void LCD1_clear(void)
 {
 	LCD1_write(0x01,INST);
-	LCD1_BF();
+	_delay_ms(1.53);
 }
 void LCD1_gotoxy(unsigned int y, unsigned int x)
 {

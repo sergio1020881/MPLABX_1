@@ -54,10 +54,10 @@ int main(int argc, char** argv) {
     /***Variables***/
     char str[16]="0";
     /***DEFINE IO***/
-    uint8_t PPINB=PINB;
-    uint8_t LPINB=PPINB;
-    uint8_t PPINC=PINC;
-    uint8_t LPINC=PPINC;
+    uint8_t PPINB=PINB;//INIC value
+    uint8_t LPINB;
+    uint8_t PPINC=PINC;//INIC value
+    uint8_t LPINC;
     /***FUNCTION***/
     PORTINIT();
 	/***INICIALIZE OBJECTS***/
@@ -70,9 +70,14 @@ int main(int argc, char** argv) {
     
 	while(TRUE){
 		lcd0.reboot();
+        /*****Oneshot******/
+        //UPDATE IO
+        LPINB=PPINB;
+        LPINC=PPINC;
         /***SETUP IO***/
         PPINB=PINB;
         PPINC=PINC;
+        /******************/
 		//TODO:: Please write your application code
 		lcd0.gotoxy(0,4);
 		lcd0.string_size("Boot up",7);
@@ -104,10 +109,6 @@ int main(int argc, char** argv) {
         if(keypad.get().character=='C'){
 			keypad.flush();
 		}
-        
-        //UPDATE IO
-        LPINB=PPINB;
-        LPINC=PPINC;
 	}
     return (EXIT_SUCCESS);
 }
