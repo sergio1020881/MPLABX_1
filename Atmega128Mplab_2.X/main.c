@@ -41,7 +41,7 @@ int main(void)
 	KEYPAD keypad = KEYPADenable(&DDRE,&PINE,&PORTE);
 	LCD0 lcd = LCD0enable(&DDRA,&PINA,&PORTA);
 	EEPROM eeprom = EEPROMenable();
-	LFSM lfsm = LFSMenable(&eeprom,146);
+	LFSM lfsm = LFSMenable(&eeprom,571);
 	FUNC func = FUNCenable();
 	/**************************************/
 	lfsm.setoutput(&lfsm,255);

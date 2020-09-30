@@ -31,7 +31,6 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
     <itemPath>main.c</itemPath>
-    <itemPath>main.c</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>Librarias/ATMEGA128API</Elem>
