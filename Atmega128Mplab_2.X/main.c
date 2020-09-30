@@ -1,11 +1,16 @@
 /* 
-File:
-	main.c
-Author:
-	Sergio Santos
+File: main.c
+Author: Sergio Santos
 	<sergio.salazar.santos@gmail.com>
+Hardware: Atmega128 by ETT ET-BASE
+	-PORTA : LCD Display 4X20
+	-PORTB : Buttons
+	-PORTC : Relay Board
+	-PORTE : Keypad 4X4
 Date:
 	30/09/2020
+Commnet:
+	LFSM
 */
 /***FCPU***/
 #define F_CPU 16000000UL
