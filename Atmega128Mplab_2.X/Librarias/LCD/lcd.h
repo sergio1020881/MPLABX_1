@@ -33,7 +33,7 @@ Comment:
 /*
 ** variable
 */
-struct display{
+struct dspl{
 	/******/
 	void (*write)(char c, unsigned short D_I);
 	char (*read)(unsigned short D_I);
@@ -47,8 +47,8 @@ struct display{
 	void (*gotoxy)(unsigned int y, unsigned int x);
 	void (*reboot)(void);
 };
-typedef struct display LCD0;
-typedef struct display LCD1;
+typedef struct dspl LCD0;
+typedef struct dspl LCD1;
 /*
 ** procedure and function header
 */

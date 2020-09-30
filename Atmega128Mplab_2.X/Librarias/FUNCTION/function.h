@@ -22,7 +22,7 @@ Comment:
 /*
 ** variable
 */
-struct function{
+struct fnctn{
 	/***PROTOTYPES VTABLE***/
 	unsigned int (*power)(uint8_t base, uint8_t n);
 	int (*stringlength)(const char string[]);
@@ -71,7 +71,7 @@ struct function{
 	int (*readint)(int nmin, int nmax);
 	*/
 };
-typedef struct function FUNC;
+typedef struct fnctn FUNC;
 /*
 ** procedure and function header
 */

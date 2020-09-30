@@ -37,7 +37,7 @@ COMMENT:
 /*
 ** variable
 */
-struct EEPROM{
+struct prm{
 	/***vtable***/
 	uint8_t (*read_byte) ( const uint8_t * addr );
 	void (*write_byte) ( uint8_t *addr , uint8_t value );
@@ -55,7 +55,7 @@ struct EEPROM{
 	void (*write_block) ( const void * pointer_ram , void * pointer_eeprom , size_t n);
 	void (*update_block) ( const void * pointer_ram , void * pointer_eeprom , size_t n);
 };
-typedef struct EEPROM EEPROM;
+typedef struct prm EEPROM;
 /*
 ** procedure and function header
 */

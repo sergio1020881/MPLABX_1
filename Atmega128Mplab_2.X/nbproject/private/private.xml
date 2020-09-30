@@ -5,10 +5,12 @@
         <group>
             <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/main.c</file>
             <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/EEPROM/eeprom.c</file>
-            <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/LFSM/lfsm.c</file>
+            <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/KEYPAD/keypad.h</file>
+            <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/LCD/lcd.h</file>
             <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/LFSM/lfsm.h</file>
             <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/FUNCTION/function.h</file>
             <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/EEPROM/eeprom.h</file>
+            <file>file:/C:/Users/sergi/Documents/GITHUB/MPLABX_1/Atmega128Mplab_2.X/Librarias/ATMEGA128API/Atmega128API.h</file>
         </group>
     </open-files>
 </project-private>

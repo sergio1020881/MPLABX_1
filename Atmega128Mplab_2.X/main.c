@@ -24,10 +24,19 @@ Date:
 #include "Librarias/FUNCTION/function.h"
 #include "Librarias/KEYPAD/keypad.h"
 #include "Librarias/LFSM/lfsm.h"
-
-char* string=NULL;
+/*
+ ** Constant and Macro
+ */
 #define True 1
+/*
+ ** Global Variable
+ */
+char* string=NULL;
+/*
+ ** Function Definition
+ */
 void PORTINIT(void);
+/***MAIN***/
 int main(void)
 {
 	PORTINIT();
@@ -45,7 +54,7 @@ int main(void)
 	FUNC func = FUNCenable();
 	/**************************************/
 	lfsm.setoutput(&lfsm,255);
-	/* Replace with your application code */
+	/*** Replace with your application code ***/
 	while (True)
 	{
 		/******/
@@ -173,7 +182,6 @@ int main(void)
 					}//End switch
 				/******/
 				//lfsm.read(&lfsm,input_tmp);
-				
 				keypad.flush();
 				option=0;
 				}//End if
@@ -285,20 +293,22 @@ int main(void)
 		string=func.ui16toa(lfsm.getoutput(&lfsm));
 		lcd.string_size(string,4);
 		//lcd.hspace(2);
-		//func.ui16toa(lfsm.getstatus(&lfsm),string);
+		//string=func.ui16toa(lfsm.getstatus(&lfsm));
 		//lcd.string_size(string,4);
 		PORTC=lfsm.getoutput(&lfsm);
 		
 	}//End while
 }//End main
-/***Def***/
+/***Procedure and Function***/
 void PORTINIT(void){
 	DDRC=0XFF;
 	PORTC=0XFF;
 	DDRB=0X00;
 	PORTB=0XFF;
 }
-/***Int***/
-/******/
-//The more one programs the more precise our logical thinking becomes absent from error.
+/***Interrupt***/
+/***Comment
+The more one programs the more precise our logical thinking becomes
+absent from error.
+***/
 /***EOF***/
