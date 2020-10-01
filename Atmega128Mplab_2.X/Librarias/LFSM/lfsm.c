@@ -16,8 +16,8 @@ Comment:
 /*
 ** constant and macro
 */
-#define EMPTY 0 //0
 #define ZERO 0 //0
+#define EMPTY 0 //0
 #define NPAGES 255 //1 to 254 possible pages
 #define BYTEL 0
 #define BYTEH 255
@@ -56,7 +56,7 @@ LFSM LFSMenable(EEPROM* eeprom, const uint16_t sizeeeprom)
 	r.sizeeeprom=sizeeeprom;
 	r.sizeblock=sizeblock;
 	r.page=ZERO;
-	r.output=255;//Output
+	r.output=0;//Output
 	//Function V table
 	r.read=LFSMread;
 	r.learn=LFSMlearn;
@@ -92,7 +92,7 @@ uint8_t LFSMread(struct lfsm *r, uint8_t input)
 		for(i1=ZERO;i1<r->sizeeeprom;i1++){
 			r->eprom->read_block(pdata, (const void*) (i1*sizeblock), sizeblock);
 			switch(pdata->page){
-				case 0:
+				case ZERO:
 					//Do nothing, continue search in status=1.
 					break;
 				case 1: //Global logic

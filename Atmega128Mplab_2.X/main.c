@@ -45,7 +45,7 @@ void PORTINIT(void);
 int main(void)
 {
 	PORTINIT();
-	uint8_t option=0;
+	uint8_t option=0; //Menu Jumper
 	uint8_t input_tmp=0;
 	struct keypadata keypadinput;
 	uint8_t output=0;
