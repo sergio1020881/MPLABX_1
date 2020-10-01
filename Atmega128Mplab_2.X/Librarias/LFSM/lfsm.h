@@ -1,23 +1,11 @@
 /************************************************************************
-Title:    LFSM
-Author:   Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
-File:     $Id: lfsm.h,v 0.1 2018/08/18 13:00:00 Sergio Exp $
-Software: GCC
-Hardware:
-	Atmel MCU (Atmega324A)
-License:  GNU General Public License
-Usage:
-	Micro controller Atmel, the library is mcu independent, but in this case using Atmega324A.
-LICENSE:
-    Copyright (C) 2018
-    This program is free software; you can redistribute it and/or modify
-    it under the consent of the code developer, in case of commercial use
-    need license.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-COMMENT:
+Title: LFSM
+Author: Sergio Santos
+   <sergio.salazar.santos@gmail.com>
+File: $Id: lfsm.h,v 0.1 01/10/2020 Exp $
+Hardware: Atmel
+License: GNU General Public License
+Comment:
 	very stable
 ************************************************************************/
 #ifndef _LFSM_H_

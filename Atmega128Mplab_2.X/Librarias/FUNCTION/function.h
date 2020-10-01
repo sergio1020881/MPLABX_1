@@ -1,12 +1,9 @@
 /************************************************************************
-Title:    FUNCTION
-Author:   
-    Sergio Santos
-    <sergio.salazar.santos@gmail.com>
-File:
-    $Id: function.h,v 0.1 29/09/2020 Exp $
-License:
-    GNU General Public License 
+Title: FUNCTION
+Author: Sergio Santos
+   <sergio.salazar.santos@gmail.com>
+File: $Id: function.h,v 0.1 29/09/2020 Exp $
+License: GNU General Public License 
 Comment:
 	Very Stable
 ************************************************************************/

@@ -1,25 +1,13 @@
 /*************************************************************************
-Title:    eeprom wrapper
-Author:   Sergio Manuel Santos <sergio.salazar.santos@gmail.com>
-File:     $Id: eeprom.c,v 0.2 2018/08/18 13:00:00 sergio Exp $
+Title: eeprom wrapper
+Author: Sergio Santos
+ * <sergio.salazar.santos@gmail.com>
+File: $Id: eeprom.c,v 0.2 01/10/2020 Exp $
 Software: AVR-GCC 4.1, AVR Libc 1.4.6 or higher
-Hardware: ATmega128 at 16 Mhz, 
-License:  GNU General Public License        
-DESCRIPTION:
-USAGE:
-NOTES:
-LICENSE:
-    Copyright (C) 2018
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    any later version.
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-COMMENT:
-	Very Stable
+Hardware: ATmega
+License: GNU General Public License
+Comment:
+   Very Stable
 *************************************************************************/
 /*
 ** library

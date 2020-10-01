@@ -1,9 +1,10 @@
 /************************************************************************
 KEYPAD API START
-Author: 
-	Sergio Santos 
-	<sergio.salazar.santos@gmail.com>
-	29092020
+Author:mSergio Santos 
+   <sergio.salazar.santos@gmail.com>
+Date: 29092020
+Comment:
+   Stable
 ************************************************************************/
 /***preamble inic***/
 #ifndef _KEYPAD_H_
