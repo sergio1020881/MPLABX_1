@@ -36,7 +36,7 @@ char FUNCstr[20];
 /*
 ** procedure and function header
 */
-unsigned int Power(uint8_t base, uint8_t n);
+unsigned int Pwr(uint8_t bs, uint8_t n);
 int StringLength (const char string[]);
 void Reverse(char s[]);
 /******/
@@ -95,7 +95,7 @@ FUNC FUNCenable( void )
 	// struct object
 	FUNC func;
 	// function pointers
-	func.power=Power;
+	func.power=Pwr;
 	func.stringlength=StringLength;
 	func.reverse=Reverse;
 	func.mayia=FUNCmayia;
@@ -151,7 +151,7 @@ unsigned int FUNCmayia(unsigned int xi, unsigned int xf, uint8_t nbits)
 	unsigned int mask;
 	unsigned int diff;
 	unsigned int trans;
-	mask=Power(2,nbits)-1;
+	mask=Pwr(2,nbits)-1;
 	xi&=mask;
 	xf&=mask;
 	diff=xf^xi;
@@ -451,12 +451,12 @@ long FUNCtrimmer(long x, long in_min, long in_max, long out_min, long out_max)
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 // power: raise base to n-th power; n >= 0
-unsigned int Power(uint8_t base, uint8_t n)
+unsigned int Pwr(uint8_t bs, uint8_t n)
 {
     unsigned int i, p;
     p = 1;
     for (i = 1; i <= n; ++i)
-        p = p * base;
+        p = p * bs;
     return p;
 }
 // Function to count the number of characters in a string

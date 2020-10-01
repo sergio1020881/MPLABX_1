@@ -9,7 +9,10 @@ ATMEGA128 API START
 		6-UART
 Author: Sergio Santos 
 	<sergio.salazar.santos@gmail.com>
-	28092020
+Date:
+   28092020
+Comment:
+   Stable
 *************************************************************************/
 /***preamble inic***/
 #ifndef F_CPU

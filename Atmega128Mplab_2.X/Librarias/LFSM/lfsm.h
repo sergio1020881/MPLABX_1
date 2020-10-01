@@ -30,8 +30,8 @@ struct lfsmdata{
 /******/
 struct lfsm{
 	//Local Variables
-	EEPROM* eeprom;
-	uint8_t sizeeeprom;
+	EEPROM* eprom;
+	uint16_t sizeeeprom;
 	uint8_t sizeblock;
 	uint8_t page;
 	uint8_t input;
@@ -53,6 +53,6 @@ typedef struct lfsm LFSM;
 /*
 ** procedure and function header
 */
-LFSM LFSMenable(EEPROM* eeprom, const uint8_t sizeeeprom);
+LFSM LFSMenable(EEPROM* eeprom, const uint16_t sizeeeprom);
 #endif
 /***EOF***/

@@ -21,7 +21,7 @@ Comment:
 */
 struct fnctn{
 	/***PROTOTYPES VTABLE***/
-	unsigned int (*power)(uint8_t base, uint8_t n);
+	unsigned int (*power)(uint8_t bs, uint8_t n);
 	int (*stringlength)(const char string[]);
 	void (*reverse)(char s[]);
 	unsigned int (*mayia)(unsigned int xi, unsigned int xf, uint8_t nbits);
