@@ -17,8 +17,8 @@ Comment:
 /*
 ** library
 */
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 #include <avr/io.h>
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
@@ -58,7 +58,7 @@ int main(void)
 	LFSM lfsm = LFSMenable(&eeprom,571);
 	FUNC func = FUNCenable();
 	/**************************************/
-	lfsm.setoutput(&lfsm,255);
+	lfsm.setoutput(&lfsm,0);
 	/*** Replace with your application code ***/
 	while (True)
 	{
@@ -210,7 +210,7 @@ int main(void)
 					lcd.hspace(17);
 					lfsm.deleteall(&lfsm);
 					lfsm.setpage(&lfsm,0);
-					lfsm.setoutput(&lfsm,0XFF);
+					//lfsm.setoutput(&lfsm,0X00);
 					keypad.flush();
 					lcd.gotoxy(3,12);
 					lcd.string_size("deleted",7);

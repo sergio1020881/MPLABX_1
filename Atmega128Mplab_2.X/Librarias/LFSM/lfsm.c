@@ -17,7 +17,6 @@ Comment:
 ** constant and macro
 */
 #define ZERO 0 //0
-#define EMPTY 0 //0
 #define NPAGES 255 //1 to 254 possible pages
 #define BYTEL 0
 #define BYTEH 255
@@ -211,7 +210,7 @@ uint8_t LFSMlearn(struct lfsm *r, const uint8_t input, const uint8_t next, const
 			}
 			for(i1=ZERO;i1<r->sizeeeprom;i1++){
 				r->eprom->read_block(pdata, (const void*) (i1*sizeblock), sizeblock);
-				if(pdata->page==EMPTY){
+				if(pdata->page==ZERO){
 					r->eprom->update_block(ptmp1, (void*) (i1*sizeblock), sizeblock);
 					status=2; //Created
 					break;
@@ -236,7 +235,7 @@ uint8_t LFSMquant(struct lfsm *r)
 	uint16_t programmed;
 	for(i1=ZERO,programmed=ZERO;i1<r->sizeeeprom;i1++){
 		r->eprom->read_block(pdata, (const void*) (i1*sizeblock), sizeblock);
-		if(pdata->page!=EMPTY){ //Count memory used
+		if(pdata->page!=ZERO){ //Count memory used
 			programmed++;
 		}
 	}
@@ -251,7 +250,7 @@ uint8_t LFSMremove(struct lfsm *r, uint8_t input)
 	uint8_t sizeblock=r->sizeblock;
 	struct lfsmdata* pdata=&data;
 	struct lfsmdata* ptmp1=&tmp1;
-	ptmp1->page=EMPTY;
+	ptmp1->page=ZERO;
 	int16_t n=ZERO;
 	uint8_t n1=NPAGES,n2=NPAGES;
 	uint8_t page=r->page;
@@ -339,7 +338,7 @@ uint8_t LFSMdeleteall(struct lfsm *r)
 	for(i1=ZERO;i1<r->sizeeeprom;i1++){
 		r->eprom->read_block(pdata, (const void*) (i1*sizeblock), sizeblock);
 		if(pdata->page){
-			pdata->page=EMPTY;
+			pdata->page=ZERO;
 			r->eprom->update_block(pdata, (void*) (i1*sizeblock), sizeblock);
 			status=1; //All deleted
 		}
